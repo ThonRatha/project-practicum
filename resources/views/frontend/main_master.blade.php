@@ -33,7 +33,7 @@
 
         <!-- Favicon -->
         <link rel="icon" type="image/png" href="{{ asset('frontend/assets/img/favicon.png') }}">
-
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" >
         <title>FlexiBooking</title>
     </head>
     <body>
@@ -92,6 +92,27 @@
         <script src="{{ asset('frontend/assets/js/contact-form-script.js') }}"></script>
         <!-- Custom JS -->
         <script src="{{ asset('frontend/assets/js/custom.js') }}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+        <script>
+            // Check if there is a session status message
+            @if(session('status'))
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success',
+                    text: "{{ session('status') }}",
+                    confirmButtonText: 'OK',  // This adds a button in the center
+                    timer: 1000,              // Optional: Automatically close after 3 seconds
+                    timerProgressBar: true,
+                    showConfirmButton: true,  // Show confirmation button
+                    allowOutsideClick: false  // Prevent closing by clicking outside the popup
+                });
+            @endif
+        </script>
+
+
 
     </body>
 </html>
