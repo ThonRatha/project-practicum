@@ -9,6 +9,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
+use App\Models\User;
 
 class AuthenticatedSessionController extends Controller
 {
@@ -24,20 +25,33 @@ class AuthenticatedSessionController extends Controller
      * Handle an incoming authentication request.
      */
     public function store(LoginRequest $request): RedirectResponse
-    {
-        $request->authenticate();
+{
+    $request->authenticate();
 
-        $request->session()->regenerate();
+    $request->session()->regenerate();
 
-        $url = '';
-        if($request->user()->role === 'admin'){
-            $url = '/admin/dashboard';
-        }elseif($request->user()->role === 'user'){
-            $url = '/dashboard';
-        }
+    $id = Auth::user()->id;
+    $profileData = User::find($id);
+    $username = $profileData->name;
 
-        return redirect()->intended($url);
+    $url = '';
+    if ($request->user()->role === 'admin') {
+        $url = '/admin/dashboard';
+    } elseif ($request->user()->role === 'user') {
+        $url = '/dashboard';
     }
+
+    // Pass the username and role to the session for the SweetAlert notification
+    session()->flash('swal', [
+        'title' => 'Login Successful!',
+        'text' => 'User ' . $username . ' logged in successfully.',
+        'icon' => 'info',
+        'redirect_url' => $url,
+    ]);
+
+    return redirect()->intended($url);
+}
+
 
     /**
      * Destroy an authenticated session.

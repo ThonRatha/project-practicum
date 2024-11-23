@@ -95,24 +95,27 @@
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-        <script>
-            // Check if there is a session status message
-            @if(session('status'))
-                Swal.fire({
-                    icon: 'success',
-                    title: 'Success',
-                    text: "{{ session('status') }}",
-                    confirmButtonText: 'OK',  // This adds a button in the center
-                    timer: 1000,              // Optional: Automatically close after 3 seconds
-                    timerProgressBar: true,
-                    showConfirmButton: true,  // Show confirmation button
-                    allowOutsideClick: false  // Prevent closing by clicking outside the popup
-                });
-            @endif
-        </script>
-
-
-
-    </body>
+<script>
+    @if (session('swal'))
+        Swal.fire({
+            title: "{{ session('swal.title') }}",
+            text: "{{ session('swal.text') }}",
+            icon: "{{ session('swal.icon') }}",
+        }).then(() => {
+            window.location.href = "{{ session('swal.redirect_url') }}";
+        });
+    @elseif (session('status'))
+        Swal.fire({
+            icon: 'success',
+            title: 'Success',
+            text: "{{ session('status') }}",
+            confirmButtonText: 'OK',
+            timer: 1000,              // Automatically close after 1 second
+            timerProgressBar: true,
+            showConfirmButton: true,  // Show confirmation button
+            allowOutsideClick: false  // Prevent closing by clicking outside
+        });
+    @endif
+</script>
+</body>
 </html>
