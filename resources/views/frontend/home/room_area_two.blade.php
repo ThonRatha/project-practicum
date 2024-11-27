@@ -5,9 +5,9 @@
                 <div class="book-content-two">
                     <div class="section-title">
                         <span class="sp-color">MAKE A QUICK BOOKING</span>
-                        <h2>We Are the Best in All-time & So Please Get a Quick Booking</h2>
+                        <h2>Spend your vocation with Us and Get a Quick Booking Now!</h2>
                         <p>
-                            Atoli is one of the best resorts in the global market and that's why you will get a luxury life period on the global market. We always
+                            FlexiBooking is one of the best resorts in the Koh Kong Province and that's why you will get a luxury life period on your holiday. We always
                             provide you a special support for all of our guests and that's will  be the main reason to be the most popular.
                         </p>
                     </div>
@@ -17,7 +17,7 @@
 
             <div class="col-lg-6">
                 <div class="book-img-2">
-                    <img src="{{ asset('frontend/assets/img/book-img2.jpg') }}" alt="Images">
+                    <img src="{{ asset('frontend/assets/img/room/room-5.jpg') }}" alt="Images">
                 </div>
             </div>
         </div>

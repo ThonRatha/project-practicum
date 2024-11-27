@@ -1,7 +1,7 @@
 @extends('frontend.main_master')
 @section('main')
 <!-- Inner Banner -->
-<div class="inner-banner inner-bg6">
+{{-- <div class="inner-banner inner-bg6">
     <div class="container">
         <div class="inner-title">
             <ul>
@@ -14,7 +14,7 @@
             <h3>User Dashboard</h3>
         </div>
     </div>
-</div>
+</div> --}}
 <!-- Inner Banner End -->
 
 <!-- Service Details Area -->
@@ -45,9 +45,9 @@
 
 </div>
 </div>
- </div>
+</div>
 
-     <div class="col-md-4">
+    <div class="col-md-4">
 <div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
 <div class="card-header">Pending Booking </div>
 <div class="card-body">

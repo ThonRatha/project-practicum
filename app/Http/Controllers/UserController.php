@@ -15,6 +15,10 @@ class UserController extends Controller
         return view('frontend.index');
     }
 
+    // public function Login() {
+    //     return view('auth.login');
+    // }
+
     public function UserProfile()
     {
         $id = Auth::user()->id;

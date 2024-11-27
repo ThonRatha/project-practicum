@@ -1,5 +1,5 @@
-@extends('frontend.main_master')
-@section('main')
+{{-- @extends('frontend.main_master')
+@section('main') --}}
 
 <!doctype html>
 <html lang="en">
@@ -8,35 +8,89 @@
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!--favicon-->
-	<link rel="icon" href="{{ asset('backend/') }}assets/images/favicon-32x32.png" type="image/png" />
-	<!--plugins-->
-	<link href="{{ asset('backend/assets/plugins/simplebar/css/simplebar.css') }}" rel="stylesheet" />
-	<link href="{{ asset('backend/assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css') }}" rel="stylesheet" />
-	<link href="{{ asset('backend/assets/plugins/metismenu/css/metisMenu.min.css') }}" rel="stylesheet" />
-	<!-- loader-->
-	<link href="{{ asset('backend/assets/css/pace.min.css') }}" rel="stylesheet" />
-	<script src="{{ asset('backend/assets/js/pace.min.js') }}"></script>
 	<!-- Bootstrap CSS -->
 	<link href="{{ asset('backend/assets/css/bootstrap.min.css') }}" rel="stylesheet">
 	<link href="{{ asset('backend/assets/css/bootstrap-extended.css') }}" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-	<link href="{{ asset('backend/assets/css/app.css') }}" rel="stylesheet">
-	<link href="{{ asset('backend/assets/css/icons.css') }}" rel="stylesheet">
-	<title>Admin Login Page</title>
-</head>
 
-<body class="">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/style.css') }}">
+
+	<title>Login Page</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <!-- Left Side: Sign In Form -->
+                <div class="col-lg-6 col-xl-6 d-flex align-items-center justify-content-center">
+                    <div class="card shadow-none bg-transparent rounded-0 mb-0">
+                        <div class="card-body text-center">
+                            <img src="{{ asset('frontend/assets/img/user_login.png') }}" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side: Image -->
+
+                <div class="col-lg-6 col-xl-6">
+                    <div class="user-all-form">
+                        <div class="contact-form">
+                            <div class="section-title text-center">
+                                <span class="sp-color">Welcome!</span>
+                                <h2>Sign In to Your Account!</h2>
+                            </div>
+
+                            <form method="POST" action="{{ route('login') }}" >
+                                @csrf
+                                <div class="row">
+                                    <div class="col-lg-8">
+                                        <div class="form-group">
+                                            <input type="text" name="login" id="login" class="form-control" required data-error="Please enter your Username or Email" placeholder="Email or Phone">
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <input class="form-control" id="password" type="password" name="password" placeholder="Password">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-6 form-condition">
+                                        <div class="agree-label">
+                                            <input type="checkbox" id="chb1">
+                                            <label for="chb1">Remember Me</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-6 text-end">
+                                        <a class="forget" href="{{ route('password.request') }}">Forgot Password?</a>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 text-center">
+                                            <button type="submit" class=" large-p default-btn btn-bg-login border-radius-5">Sign In Now</button>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="text-center">
+                                            <div class="account-desc">
+                                                <p class="{{ route('register') }}">Don't have an account? <a href="sign-up.html">Sign Up</a></p>
+                                            </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
 	<!--wrapper-->
-	<div class="wrapper">
+	{{-- <div class="wrapper">
 		<div class="section-authentication-cover">
 			<div class="">
 				<div class="row g-0">
-
                     <div class="sign-in-area pt-10 pb-70">
                         <div class="container">
                             <div class="row justify-content-center align-items-center">
-
                                 <!-- Left Side: Sign In Form -->
                                 <div class="col-lg-6 col-xl-6">
                                     <div class="user-all-form">
@@ -97,23 +151,14 @@
                             </div>
                         </div>
                     </div>
-
-
-
-
 				</div>
 				<!--end row-->
 			</div>
 		</div>
-	</div>
+	</div> --}}
 	<!--end wrapper-->
 	<!-- Bootstrap JS -->
 	<script src="{{ asset('backend/assets/js/bootstrap.bundle.min.js') }}"></script>
-	<!--plugins-->
-	<script src="{{ asset('backend/assets/js/jquery.min.js') }}"></script>
-	<script src="{{ asset('backend/assets/plugins/simplebar/js/simplebar.min.js') }}"></script>
-	<script src="{{ asset('backend/assets/plugins/metismenu/js/metisMenu.min.js') }}"></script>
-	<script src="{{ asset('backend/assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js') }}"></script>
 	<!--Password show & hide js -->
 	<script>
 		$(document).ready(function () {
@@ -137,5 +182,3 @@
 
 </html>
 
-
-@endsection

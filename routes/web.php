@@ -12,6 +12,8 @@ use Illuminate\Support\Facades\Route;
 // });
 Route::get('/', [UserController::class, 'Index']);
 
+// Route::get('/login', [UserController::class, 'Login']);
+
 Route::get('/dashboard', function () {
     return view('frontend.dashboard.user_dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

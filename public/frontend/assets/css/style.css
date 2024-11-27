@@ -1,9 +1,5 @@
 /*
-@File: Atoli HTML Template
-
-* This file contains the styling for the actual template, this
-is the file you need to edit to change the look of the
-template.
+@File: HTML Template
 
 *******************************************
 *******************************************
@@ -225,6 +221,10 @@ Default Btn Style
     background-color: #1e75d6;
 }
 
+.btn-bg-login {
+    background-color: #6aa4fc;
+}
+
 /*================================
 Default Btn Style End
 ===================================*/
@@ -264,11 +264,11 @@ Section Title Style End
 Top Header
 ===================================*/
 .top-header {
-    padding: 7px 0 10px;
+    padding: 15px 0 20px;
 }
 
 .top-header-bg {
-    background-color: #1B2132;
+    background-color: #4d90fc;
 }
 
 .header-right {
@@ -332,11 +332,11 @@ Top Header
 }
 
 .header-right ul li:hover i {
-    color: #1e75d6;
+    color: #000000;
 }
 
 .header-right ul li:hover a {
-    color: #4d90fc;
+    color: #000000;
 }
 
 .language-list {
@@ -434,6 +434,11 @@ Top Header End
 /*=================================
 Navbar Area
 ====================================*/
+.logo-one,
+.logo-two {
+    width: 300px;
+    height: auto;
+}
 .navbar-light .navbar-brand .logo-two {
     display: none;
 }
@@ -455,30 +460,32 @@ Navbar Area
 }
 
 .main-nav nav .navbar-nav .nav-item:hover a, .main-nav nav .navbar-nav .nav-item .active {
-    color: #1e75d6#4d90fc !important;
+    color: #000000 #4d90fc !important;
 }
 
 .main-nav nav .navbar-nav .nav-item a {
     text-transform: capitalize;
-    color: #1e75d6;
-    font-weight: 500;
-    margin-left: 12px;
-    margin-right: 12px;
+    color: #000000;
+    font-weight: 600;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 .main-nav nav .navbar-nav .nav-item a i {
     line-height: 0;
     position: relative;
     top: 3px;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .main-nav nav .navbar-nav .nav-item a:hover, .main-nav nav .navbar-nav .nav-item a :focus {
     color: #1e75d6 !important;
+
 }
 
 .main-nav nav .navbar-nav .nav-item a.active {
     color: #1e75d6 !important;
+
 }
 
 .main-nav nav .navbar-nav .nav-item a .active::before {
@@ -511,7 +518,7 @@ Navbar Area
 
 .main-nav nav .navbar-nav .nav-item .dropdown-menu li a {
     text-transform: capitalize;
-    color: #292323 !important;
+    color: #000000 !important;
     position: relative;
     -webkit-transition: 0.7s;
     transition: 0.7s;
@@ -521,16 +528,16 @@ Navbar Area
 
 .main-nav nav .navbar-nav .nav-item .dropdown-menu li a.active {
     border-radius: 0;
-    color: #4d90fc !important;
+    color: #1e75d6 !important;
 }
 
 .main-nav nav .navbar-nav .nav-item .dropdown-menu li a:hover, .main-nav nav .navbar-nav .nav-item .dropdown-menu li a :focus, .main-nav nav .navbar-nav .nav-item .dropdown-menu li a .active {
-    color: #4d90fc !important;
+    color: #1e75d6 !important;
     border-radius: 0;
 }
 
 .main-nav nav .navbar-nav .nav-item .dropdown-menu li.active {
-    color: #4d90fc !important;
+    color: #1e75d6 !important;
 }
 
 .main-nav nav .navbar-nav .nav-item .dropdown-menu li .dropdown-menu {
@@ -654,7 +661,7 @@ Navbar Area
     margin: 0 2px;
     -webkit-transition: 0.7s;
     transition: 0.7s;
-    background-color: #1B2132;
+    background-color: #ffffff;
 }
 
 .side-nav-responsive .dot-menu:hover .circle-inner .circle {
@@ -1201,7 +1208,7 @@ Sidebar Modal
 Main Banner Area
 ====================================*/
 .banner-area {
-    background-image: url(../img/home-one.jpg);
+    background-image: url(../img/banner.png);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1223,24 +1230,25 @@ Main Banner Area
     } */
 
 .banner-content {
-    padding: 160px 0 230px;
+    padding: 150px 0 100px;
     max-width: 650px;
     margin-right: auto;
     position: relative;
 }
 
 .banner-content h1 {
-    font-size: 60px;
+    font-style: italic;
+    font-size: 45px;
     line-height: 1.2;
-    font-weight: 700;
+    font-weight: 500;
     margin-bottom: 20px;
-    color: #292323;
+    color: #ffffff;
 }
 
 .banner-content p {
-  font-size: 18px;
+  font-size: 24px;
   margin-bottom: 30px;
-  color: #292323;
+  color: #FFFFFF;
 }
 
 .banner-area-three {
@@ -2728,6 +2736,49 @@ Specialty Area
 /*=================================
 Specialty Area End
 ====================================*/
+
+/*=================================
+Promotion Area
+====================================*/
+.card-img img {
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    height: auto;
+}
+
+.card-img img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Adds a shadow effect */
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+}
+
+.container h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.container .view-all {
+    position: absolute;
+    padding-right: 15px;
+    top: 0;
+    right: 0;
+    text-decoration: none;
+    font-size: 18px;
+    color: #007bff;
+}
+.container .view-all:hover {
+    transform: scale(1.05);
+    color: #000000;
+}
+
+
+
 /*=================================
 Room Area
 ====================================*/
@@ -3041,13 +3092,22 @@ Room Area
   top: 3px;
 }
 
-.room-card-two .room-card-content .book-more-btn {
+/* .room-card-two .room-card-content .book-more-btn {
   margin-top: 5px;
   margin-bottom: 5px;
   background-color: #EE786C;
   padding: 6px 18px;
   color: #ffffff;
-}
+} */
+.room-card-two .room-card-content .book-more-btn {
+    margin: 5px auto; /* Centers the button horizontally with auto margins */
+    background-color: #EE786C;
+    padding: 6px 18px;
+    color: #ffffff;
+    display: inline-block; /* Ensures the button behaves like a block-level element */
+    border-radius: 5px; /* Optional: Rounded corners for the button */
+    text-decoration: none; /* Removes underline for the link */
+  }
 
 .room-card-two .room-card-content .book-more-btn:hover {
   background-color: #1B2132;
@@ -4076,51 +4136,61 @@ Map Area End
 /*=================================
 User All Form
 ====================================*/
+.wrapper {
+    background-color: #ffffff !important; /* Replace with your desired color */
+}
+
 .user-all-form {
-  margin-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 .user-all-form .contact-form {
-  max-width: 650px;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 15px;
+    background-color: #ffffff !important;
+    max-width: 650px;
+    height: auto;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
 }
 
 .user-all-form .contact-form .section-title {
-  margin-bottom: 30px;
+    margin-bottom: 30px;
+    font-size: 30px;
 }
 
 .user-all-form .contact-form .agree-label label {
-  font-weight: 500;
-  color: #292323;
-  margin-left: 10px;
+    font-weight: 500;
+    color: #292323;
+    margin-left: 10px;
 }
 
 .user-all-form .contact-form .forget {
-  margin-bottom: 15px;
-  float: right;
-  color: #292323;
-  font-weight: 500;
+    margin-bottom: 15px;
+    float: right;
+    color: #292323;
+    font-weight: 500;
 }
 
 .user-all-form .contact-form .forget:hover {
-  color: #EE786C;
+    color: #4d90fc;
 }
 
 .user-all-form .contact-form .account-desc {
-  margin-top: 15px;
-  font-weight: 600;
-  text-align: center;
-  margin-bottom: 0;
+    margin-top: 15px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 0;
 }
 
 .user-all-form .contact-form .account-desc a {
-  color: #B56952;
+    color: #4d90fc;
 }
 
+
+
 .user-all-form .contact-form .account-desc a:hover {
-  color: #EE786C;
+    color: #4d90fc;
 }
 
 /*=================================
@@ -4158,7 +4228,7 @@ Team Area
 
 .team-area .owl-nav .owl-prev:hover {
   color: #ffffff !important;
-  background-color: #B56952 !important;
+  background-color: #4d90fc !important;
 }
 
 .team-area .owl-nav .owl-next {

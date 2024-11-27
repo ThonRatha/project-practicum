@@ -4,7 +4,6 @@
         <!-- Required Meta Tags -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="{{ asset('frontend/assets/css/bootstrap.min.css') }}">
         <!-- Animate Min CSS -->
@@ -32,7 +31,7 @@
         <link rel="stylesheet" href="{{ asset('frontend/assets/css/theme-dark.css') }}">
 
         <!-- Favicon -->
-        <link rel="icon" type="image/png" href="{{ asset('frontend/assets/img/favicon.png') }}">
+        <link rel="icon" type="image/png"  href="{{ asset('frontend/assets/img/fav_icon.png') }}">
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" >
         <title>FlexiBooking</title>
     </head>

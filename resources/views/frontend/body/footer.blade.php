@@ -6,24 +6,21 @@
                     <div class="footer-widget">
                         <div class="footer-logo">
                             <a href="index.html">
-                                <img src="assets/img/logos/footer-logo1.png" alt="Images">
+                                <img src="{{ asset('frontend/assets/img/logos/footer-logo.png') }}" alt="Images">
                             </a>
                         </div>
-                        <p>
-                            Aenean finibus convallis nisl sit amet hendrerit. Etiam blandit velit non lorem mattis, non ultrices eros bibendum .
-                        </p>
                         <ul class="footer-list-contact">
                             <li>
                                 <i class='bx bx-home-alt'></i>
-                                <a href="#">123 Stanton, Virginia, USA</a>
+                                <a href="#"> Phum CPC,sangkat Tuek Tla, khan Sen Sok, Phnom Penh, Cambodia</a>
                             </li>
                             <li>
                                 <i class='bx bx-phone-call'></i>
-                                <a href="tel:+1-(123)-456-7890">+1 (123) 456 7890</a>
+                                <a href="tel:+1-(123)-456-7890">+885 123456789</a>
                             </li>
                             <li>
                                 <i class='bx bx-envelope'></i>
-                                <a href="mailto:hello@atoli.com">hello@atoli.com</a>
+                                <a href="mailto:hello@atoli.com">flexibooking@gmail.com</a>
                             </li>
                         </ul>
                     </div>
@@ -43,18 +40,6 @@
                                 <a href="services-1.html" target="_blank">
                                     <i class='bx bx-caret-right'></i>
                                     Services
-                                </a>
-                            </li>
-                            <li>
-                                <a href="team.html" target="_blank">
-                                    <i class='bx bx-caret-right'></i>
-                                    Team
-                                </a>
-                            </li>
-                            <li>
-                                <a href="gallery.html" target="_blank">
-                                    <i class='bx bx-caret-right'></i>
-                                    Gallery
                                 </a>
                             </li>
                             <li>
@@ -96,18 +81,6 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="testimonials.html" target="_blank">
-                                    <i class='bx bx-caret-right'></i>
-                                    Testimonials
-                                </a>
-                            </li>
-                            <li>
-                                <a href="gallery.html" target="_blank">
-                                    <i class='bx bx-caret-right'></i>
-                                    Gallery
-                                </a>
-                            </li>
-                            <li>
                                 <a href="contact.html" target="_blank">
                                     <i class='bx bx-caret-right'></i>
                                     Contact Us
@@ -119,14 +92,12 @@
 
                 <div class="col-lg-3 col-md-6">
                     <div class="footer-widget">
-                        <h3>Newsletter</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Nullam tempor eget ante fringilla rutrum aenean sed venenatis .
-                        </p>
+                        <h3>Subscribe Us</h3>
+
                         <div class="footer-form">
                             <form class="newsletter-form" data-toggle="validator" method="POST">
                                 <div class="row">
+                                    
                                     <div class="col-lg-12">
                                         <div class="form-group">
                                             <input type="email" class="form-control" placeholder="Your Email*" name="EMAIL" required autocomplete="off">
@@ -152,13 +123,13 @@
                 <div class="col-lg-8 col-md-8">
                     <div class="copy-right-text text-align1">
                         <p>
-                            Copyright @<script>document.write(new Date().getFullYear())</script> Atoli. All Rights Reserved by
-                            <a href="https://hibootstrap.com/" target="_blank">HiBootstrap</a>
+                            Copyright @ FlexiBooking. All Rights Reserved by
+                            <a href="#" target="_blank">Thon Ratha</a>
                         </p>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-4">
+                <div class="col-lg-11 col-md-11">
                     <div class="social-icon text-align2">
                         <ul class="social-link">
                             <li>
@@ -169,12 +140,6 @@
                             </li>
                             <li>
                                 <a href="#" target="_blank"><i class='bx bxl-instagram'></i></a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank"><i class='bx bxl-pinterest-alt'></i></a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank"><i class='bx bxl-youtube'></i></a>
                             </li>
                         </ul>
                     </div>

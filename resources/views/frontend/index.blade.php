@@ -5,9 +5,8 @@
 <div class="banner-area" style="height: 480px;">
     <div class="container">
         <div class="banner-content">
-            {{-- <h1>Discover a Hotel & Resort to Book a Suitable Room</h1> --}}
-
-
+            <h1>Enjoy your vocation with Us!</h1>
+            <p> Booking room to stay and we'll show you who with!</p>
         </div>
     </div>
 </div>
@@ -21,9 +20,9 @@
                 <div class="row align-items-center">
                     <div class="col-lg-3 col-md-3">
                         <div class="form-group">
-                            <label>CHECK IN TIME</label>
+                            <label>CHECK IN</label>
                             <div class="input-group">
-                                <input id="datetimepicker" type="text" class="form-control" placeholder="11/02/2020">
+                                <input id="datetimepicker" type="text" class="form-control" placeholder="10/11/2024">
                                 <span class="input-group-addon"></span>
                             </div>
                             <i class='bx bxs-chevron-down'></i>
@@ -32,9 +31,9 @@
 
                     <div class="col-lg-3 col-md-3">
                         <div class="form-group">
-                            <label>CHECK OUT TIME</label>
+                            <label>CHECK OUT</label>
                             <div class="input-group">
-                                <input id="datetimepicker-check" type="text" class="form-control" placeholder="11/02/2020">
+                                <input id="datetimepicker" type="text" class="form-control" placeholder="11/11/2024">
                                 <span class="input-group-addon"></span>
                             </div>
                             <i class='bx bxs-chevron-down'></i>
@@ -55,7 +54,7 @@
 
                     <div class="col-lg-4 col-md-4">
                         <button type="submit" class="default-btn btn-bg-one border-radius-5">
-                            Check Arability
+                            Check Availability
                         </button>
                     </div>
                 </div>
@@ -65,9 +64,13 @@
 </div>
 <!-- Banner Form Area End -->
 
+@include('frontend.home.promotion')
+
 <!-- Room Area -->
 @include('frontend.home.room_area')
 <!-- Room Area End -->
+
+
 
 <!-- Book Area Two-->
 @include('frontend.home.room_area_two')
@@ -76,7 +79,7 @@
 <!-- Services Area Three -->
 @include('frontend.home.services')
 <!-- Services Area Three End -->
-
+{{--
 <!-- Team Area Three -->
 @include('frontend.home.team')
 <!-- Team Area Three End -->
@@ -91,5 +94,5 @@
 
 <!-- Blog Area -->
 @include('frontend.home.blog')
-<!-- Blog Area End -->
+<!-- Blog Area End -->  --}}
 @endsection
