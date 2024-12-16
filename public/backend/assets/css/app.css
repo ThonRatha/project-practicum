@@ -9,6 +9,9 @@ body {
 	font-family: Roboto, sans-serif
 }
 
+.sp-color{
+    color: #008cff;
+}
 a {
 	text-decoration: none
 }

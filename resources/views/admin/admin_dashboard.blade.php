@@ -5,8 +5,6 @@
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!--favicon-->
-	<link rel="icon" href="{{ asset('backend/assets/images/favicon-32x32.png') }}" type="image/png"/>
 	<!--plugins-->
 	<link href="{{ asset('backend/assets/plugins/vectormap/jquery-jvectormap-2.0.2.css') }}" rel="stylesheet"/>
 	<link href="{{ asset('backend/assets/plugins/simplebar/css/simplebar.css') }}" rel="stylesheet" />
@@ -27,7 +25,8 @@
 	<link rel="stylesheet" href="{{ asset('backend/assets/css/header-colors.css') }}"/>
     <!-- Toastr CSS -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" >
-	<title>FlexiBooking Admin Dashboard </title>
+    <link href="{{ asset('frontend/assets/plugins/datatable/css/dataTables.bootstrap5.min.css" rel="stylesheet') }}" />
+	<title>Admin Dashboard </title>
 </head>
 
 <body>
@@ -104,6 +103,13 @@
     }
     @endif
 </script>
+    <!--data-table JS-->
+    <script src="{{ asset('backend/assets/plugins/datatable/js/jquery.dataTables.min.js') }}"></script>
+	<script src="{{ asset('backend/assets/plugins/datatable/js/dataTables.bootstrap5.min.js') }}"></script>
+	<script>
+		$(document).ready(function() {
+			$('#example').DataTable();
+		} );
+	</script>
 </body>
-
 </html>

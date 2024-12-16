@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\Backend\TeamController;
 use Illuminate\Support\Facades\Route;
 
 // Route::get('/', function () {
@@ -10,7 +11,7 @@ use Illuminate\Support\Facades\Route;
 // });
 Route::get('/', [UserController::class, 'Index']);
 
-// Route::get('/login', [UserController::class, 'Login']);
+//Route::get('/login', [UserController::class, 'Login']);
 
 Route::get('/dashboard', function () {
     return view('frontend.dashboard.user_dashboard');
@@ -22,9 +23,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/user/logout', [UserController::class, 'UserLogout'])->name('user.logout');
     Route::get('/user/change/password', [UserController::class, 'UserChangePassword'])->name('user.change.password');
     Route::post('/password/change/password', [UserController::class, 'ChangePasswordStore'])->name('password.change.store');
-
-    // Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    // Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
 require __DIR__.'/auth.php';
@@ -44,3 +42,11 @@ Route::middleware(['auth', 'roles:admin'])->group(function(){
 
 Route::get('/admin/login', [AdminController::class, 'AdminLogin'])->name('admin.login');
 
+// Admin group middleware
+Route::middleware(['auth', 'roles:admin'])->group(function(){
+
+    Route::controller(TeamController::class)->group(function(){
+
+        Route::get('/all/team', 'AllTeam')->name('all.team');
+    });
+});
