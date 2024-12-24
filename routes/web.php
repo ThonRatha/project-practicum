@@ -5,6 +5,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\Backend\TeamController;
 use Illuminate\Support\Facades\Route;
+use Intervention\Image\Facades\Image;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -48,5 +49,12 @@ Route::middleware(['auth', 'roles:admin'])->group(function(){
     Route::controller(TeamController::class)->group(function(){
 
         Route::get('/all/team', 'AllTeam')->name('all.team');
+        Route::get('/add/team', 'AddTeam')->name('add.team');
+        Route::post('/team/store', 'StoreTeam')->name('team.store');
+        Route::get('/edit/team/{id}', 'EditTeam')->name('edit.team');
+        Route::post('/team/update', 'UpdateTeam')->name('team.update');
+        Route::get('/delete/team/{id}', 'DeleteTeam')->name('delete.team');
     });
 });
+
+

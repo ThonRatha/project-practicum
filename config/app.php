@@ -155,12 +155,13 @@ return [
     |
     */
 
+
     'providers' => ServiceProvider::defaultProviders()->merge(
         [
             /*
              * Package Service Providers...
              */
-            
+            // Intervention\Image\ImageServiceProvider::class,
 
             /*
              * Laravel Framework Service Providers...
@@ -212,6 +213,7 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'ExampleClass' => App\Example\ExampleClass::class,
+        // 'Image' => Intervention\Image\Facades\Image::class,
 
     ])->toArray(),
 

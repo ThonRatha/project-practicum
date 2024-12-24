@@ -7,14 +7,17 @@
         <div class="ps-3">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb mb-0 p-0">
-                    <button type="button" class="btn btn-outline-primary px-5 radius-10">Add Team</button>
+                    <a href="{{ route('add.team') }}">
+                        <button type="button" class="btn btn-outline-primary px-5 radius-10">Add Team</button>
+                    </a>
                 </ol>
+
             </nav>
         </div>
-        
+
     </div>
     <!--end breadcrumb-->
-    <h6 class="mb-0 text-uppercase">DataTable Example</h6>
+    <h6 class="mb-0 px-3">All Team Members</h6>
     <hr/>
     <div class="card">
         <div class="card-body">
@@ -22,32 +25,32 @@
                 <table id="example" class="table table-striped table-bordered" style="width:100%">
                     <thead>
                         <tr>
+                            <th >ID</th>
+                            <th>Image</th>
                             <th>Name</th>
                             <th>Position</th>
-                            <th>Office</th>
-                            <th>Age</th>
                             <th>Start date</th>
-                            <th>Salary</th>
+                            <th>Active</th>
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach ($team as $key=> $item)
                         <tr>
-                            <td>Tiger Nixon</td>
-                            <td>System Architect</td>
-                            <td>Edinburgh</td>
-                            <td>61</td>
-                            <td>2011/04/25</td>
-                            <td>$320,800</td>
-                        </tr>
+                            <td>{{ $key + 1 }}</td>
+                            <td>
+                                <img src="{{ asset($item->image) }}" alt="" style="width: 100px; height: 100px;">
+                            </td>
 
-                        <tr>
-                            <td>Donna Snider</td>
-                            <td>Customer Support</td>
-                            <td>New York</td>
-                            <td>27</td>
-                            <td>2011/01/25</td>
-                            <td>$112,000</td>
+                            <td>{{ $item -> name }}</td>
+                            <td>{{ $item -> position }}</td>
+                            <td>{{ $item -> name }}</td>
+                            <td>
+                                <a href="{{ route('edit.team', $item->id) }}" class="btn btn-outline-warning px-5 radius-10" style="border-color: rgb(9, 203, 9); color: green; margin-right: 16px;">Edit</a>
+
+                                <a href="{{ route('delete.team', $item->id) }}" class="btn btn-outline-danger px-5 radius-10" id="delete">Delete</a>
+                            </td>
                         </tr>
+                        @endforeach
                     </tbody>
 
                 </table>
