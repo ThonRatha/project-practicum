@@ -45,7 +45,7 @@
                             <td>{{ $item -> position }}</td>
                             <td>{{ $item -> name }}</td>
                             <td>
-                                <a href="{{ route('edit.team', $item->id) }}" class="btn btn-outline-warning px-5 radius-10" style="border-color: rgb(9, 203, 9); color: green; margin-right: 16px;">Edit</a>
+                                <a href="{{ route('edit.team', $item->id) }}" class="btn btn-outline-success px-5 radius-10">Edit</a>
 
                                 <a href="{{ route('delete.team', $item->id) }}" class="btn btn-outline-danger px-5 radius-10" id="delete">Delete</a>
                             </td>
