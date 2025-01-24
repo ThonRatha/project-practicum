@@ -9,9 +9,9 @@
         <div class="ps-3">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb mb-0 p-0">
-                    <li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
+                    <li class="breadcrumb-item"><a href="javascript:;"><i class="fa-solid fa-house" style="font-size: 24px;"></i>
                     </li>
-                    <li class="breadcrumb-item active" aria-current="page">Admin Profile</li>
+                    <li class="breadcrumb-item active" aria-current="page" style="margin-left: 16px;">Admin Profile</li>
                 </ol>
             </nav>
         </div>
@@ -46,20 +46,23 @@
                             <hr class="my-4" />
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                                    <h6 class="mb-0">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-telegram me-2 icon-inline text-primary">
-                                            <path d="M22 2L11 13"></path>
-                                            <polygon points="22 2 15 22 11 13 6 11 22 2"></polygon>
-                                            <line x1="10" y1="11" x2="15" y2="22"></line>
-                                        </svg>
-                                        Telegram
+                                    <h6 class="mb-24">
+                                        <i class="fa-brands fa-telegram" style="font-size: 24px; color: #0088cc;"></i>   Telegram
                                     </h6>
-                                    <span class="text-secondary">Ratha Thon</span>
+                                    <span class="text-secondary">Lily</span>
                                 </li>
 
                                 <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                                    <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook me-2 icon-inline text-primary"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>Facebook</h6>
+                                    <h6 class="mb-24">
+                                        <i class="fa-brands fa-facebook" style="font-size: 24px; color: #4267B2;"></i>    Facebook
+                                    </h6>
                                     <span class="text-secondary">Lily Rose</span>
+                                </li>
+
+                                <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                                    <h6 class="mb-24">
+                                        <i class="fa-solid fa-location-dot"  style="font-size: 24px; color:#4d90fc"></i>    Phum CPC, Tuek Tla, Sen Sok, Phnom Penh, Cambodia</i>
+                                    </h6>
                                 </li>
                             </ul>
                         </div>

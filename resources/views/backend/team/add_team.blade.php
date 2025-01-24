@@ -22,7 +22,7 @@
         <div class="main-body">
             <div class="row">
 
-                <div class="col-lg-8">
+                <div class="col-lg-12">
                     <div class="card">
                         <form id="myForm" action="{{ route('team.store') }}" method="POST" enctype="multipart/form-data">
                             @csrf

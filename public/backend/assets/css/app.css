@@ -64,14 +64,13 @@ a {
 	font-size: 22px;
 	margin-left: 10px;
 	margin-bottom: 0;
-	letter-spacing: 1px;
 	color: #008cff;
 }
 
 .toggle-icon {
-	font-size: 22px;
+	font-size: 20px;
 	cursor: pointer;
-	color: #008cff
+	color: #008cff;
 }
 
 .topbar {
@@ -237,20 +236,20 @@ a {
 	letter-spacing: .5px
 }
 
-.metismenu .has-arrow:after {
-	position: absolute;
-	content: "";
-	width: .5em;
-	height: .5em;
-	border-style: solid;
-	border-width: 1.2px 0 0 1.2px;
-	border-color: initial;
-	right: 15px;
-	transform: rotate(-45deg) translateY(-50%);
-	transform-origin: top;
-	top: 50%;
-	transition: all .3s ease-out
+.metismenu .has-arrow {
+    position: relative;
 }
+
+.metismenu .has-arrow .parent-icon {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.metismenu .has-arrow:after {
+    content: none;
+    transition: none;
+}
+
 
 @media screen and (min-width:1025px) {
 	.wrapper.toggled:not(.sidebar-hovered) .sidebar-wrapper .sidebar-header .logo-text {
@@ -750,9 +749,7 @@ form select.error:focus {
 }
 
 .cursor-pointer {
-
 	cursor: pointer
-
 }
 
 .dash-wrapper {
@@ -768,6 +765,7 @@ form select.error:focus {
     right: 30px;
 }
 
+/* Chart in Admin dashboard */
 .chart-container-0{
 	position:relative;
 	height:320px;
@@ -807,22 +805,22 @@ form select.error:focus {
 	position:relative;
 	height:60px;
 }
- .chart-container-8 {
-   position: relative;
-   height: 260px;
+.chart-container-8 {
+    position: relative;
+    height: 260px;
 }
 .chart-container-9 {
-   position: relative;
-   height: 280px;
+    position: relative;
+    height: 280px;
 }
 .chart-container-10 {
-   position: relative;
-   height: 300px;
-   top: 20px;
+    position: relative;
+    height: 300px;
+    top: 20px;
 }
 .chart-container-11 {
-   position: relative;
-   height: 280px;
+    position: relative;
+    height: 280px;
 }
 
 .chart-container-12 {
@@ -1601,94 +1599,14 @@ form select.error:focus {
 	background-color: rgb(0 0 0 / 15%)!important
 }
 
-.bg-gradient-deepblue {
-    background: #6a11cb;
-    background: -webkit-linear-gradient(
-	45deg
-	, #6a11cb, #2575fc)!important;
-		background: linear-gradient(
-	45deg
-	, #6a11cb , #2575fc)!important;
-}
-
-
-.bg-gradient-orange {
-    background: #fc4a1a;
-    background: -webkit-linear-gradient(
-	45deg
-	, #fc4a1a, #f7b733)!important;
-		background: linear-gradient(
-	45deg
-	, #fc4a1a, #f7b733)!important;
-}
-
-.bg-gradient-ohhappiness {
-    background: #00b09b;
-    background: -webkit-linear-gradient(
-	45deg
-	, #00b09b, #96c93d)!important;
-		background: linear-gradient(
-	45deg
-	, #00b09b, #96c93d)!important;
-}
-
-
-.bg-gradient-ibiza {
-    background: #ee0979;
-    background: -webkit-linear-gradient(
-	45deg
-	, #ee0979, #ff6a00)!important;
-		background: linear-gradient(
-	45deg
-	, #ee0979, #ff6a00)!important;
-}
-
-.bg-gradient-scooter {
-    background: #17ead9;
-    background: -webkit-linear-gradient(
-45deg
-, #17ead9, #6078ea)!important;
-    background: linear-gradient(
-45deg
-, #17ead9, #6078ea)!important;
-}
-
-
-.bg-gradient-bloody {
-    background: #f54ea2;
-    background: -webkit-linear-gradient(
-45deg
-, #f54ea2, #ff7676)!important;
-    background: linear-gradient(
-45deg
-, #f54ea2, #ff7676)!important;
-}
-
-
-.bg-gradient-quepal {
+.bg-gradient-green {
     background: #42e695;
     background: -webkit-linear-gradient(
 45deg
-, #42e695, #3bb2b8)!important;
+, #42e695, #04be38)!important;
     background: linear-gradient(
 45deg
-, #42e695, #3bb2b8)!important;
-}
-
-
-.bg-gradient-blooker {
-    background: #ffdf40;
-    background: -webkit-linear-gradient(
-45deg
-, #ffdf40, #ff8359)!important;
-    background: linear-gradient(
-45deg
-, #ffdf40, #ff8359)!important;
-}
-
-
-.bg-gradient-cosmic {
-	background: linear-gradient(to right, #8e2de2, #4a00e0)!important
+, #42e695, #04be38)!important;
 }
 
 .bg-gradient-burning {
@@ -1705,10 +1623,6 @@ form select.error:focus {
 
 .bg-gradient-blues {
 	background: linear-gradient(to right, #56ccf2, #2f80ed)!important
-}
-
-.bg-gradient-moonlit {
-	background: linear-gradient(to right, #0f2027, #203a43, #2c5364)!important
 }
 
 .split-bg-primary {
@@ -1760,26 +1674,24 @@ form select.error:focus {
 /* Text Color */
 
 .text-option{
-	color: #32393f!important
- }
+    color: #32393f!important
+}
 
-.text-facebook{
-	color: #3b5998!important
- }
+    .text-facebook{
+    color: #3b5998!important
+}
 
- .text-twitter{
-	 color: #55acee!important
-  }
+.text-twitter{
+    color: #55acee!important
+}
 
-  .text-youtube{
-	 color: #e52d27!important
-  }
+.text-youtube{
+    color: #e52d27!important
+}
 
 .text-sky-light {
     color: #b4d2ff;
 }
-
-
 
 .section-authentication-signin {
 	height: 100vh

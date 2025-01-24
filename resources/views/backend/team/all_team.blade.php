@@ -43,7 +43,7 @@
 
                             <td>{{ $item -> name }}</td>
                             <td>{{ $item -> position }}</td>
-                            <td>{{ $item -> name }}</td>
+                            <td>{{ $item -> facebook }}</td>
                             <td>
                                 <a href="{{ route('edit.team', $item->id) }}" class="btn btn-outline-success px-5 radius-10">Edit</a>
 

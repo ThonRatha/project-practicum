@@ -9,7 +9,7 @@
         <div class="ps-3">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb mb-0 p-0">
-                    <li class="breadcrumb-item"><a href="javascript:;"></a>
+                    <li class="breadcrumb-item"><a href="javascript:;"></a><i class="fa-solid fa-pen-to-square" style="font-size: 24px; color:#4d90fc"></i>
                     </li>
                     <li class="breadcrumb-item active" aria-current="page">Update Book Area</li>
                 </ol>
@@ -21,8 +21,7 @@
     <div class="container">
         <div class="main-body">
             <div class="row">
-
-                <div class="col-lg-8">
+                <div class="col-lg-12">
                     <div class="card">
                         <form action="{{ route('book.area.update') }}" method="POST" enctype="multipart/form-data">
                             @csrf

@@ -38,8 +38,8 @@
                                 <td class="center-text">{{ $item -> name }}</td>
                                 @foreach ($rooms as $roo)
                                     <td class="center-text">
-                                        <a href="{{ route('edit.room', $item->id) }}" class="btn btn-outline-success px-3 radius-10" style="margin-right: 16px;">Edit</a>
-                                        <a href="{{ route('delete.team', $item->id) }}" class="btn btn-outline-danger px-3 radius-10" id="delete">Delete</a>
+                                        <a href="{{ route('edit.room', $roo->id) }}" class="btn btn-outline-success px-3 radius-10" style="margin-right: 16px;">Edit</a>
+                                        <a href="{{ route('delete.team', $roo->id) }}" class="btn btn-outline-danger px-3 radius-10" id="delete">Delete</a>
                                     </td>
                                 @endforeach
                             </tr>

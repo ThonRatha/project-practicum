@@ -1,24 +1,24 @@
 <header>
     <div class="topbar d-flex align-items-center">
         <nav class="navbar navbar-expand gap-3">
-            <div class="mobile-toggle-menu"><i class='bx bx-menu'></i>
+            <div class="mobile-toggle-menu"><i class="fa-solid fa-bars"></i></i>
             </div>
 
             <div class="position-relative search-bar d-lg-block d-none" data-bs-toggle="modal" data-bs-target="#SearchModal">
                 <input class="form-control px-5" disabled type="search" placeholder="Search">
-                <span class="position-absolute top-50 search-show ms-3 translate-middle-y start-0 top-50 fs-5"><i class='bx bx-search'></i></span>
+                <span class="position-absolute top-50 search-show ms-3 translate-middle-y start-0 top-50 fs-5"><i class="fa-solid fa-magnifying-glass"></i></span>
             </div>
 
 
             <div class="top-menu ms-auto">
                 <ul class="navbar-nav align-items-center gap-1">
                     <li class="nav-item mobile-search-icon d-flex d-lg-none" data-bs-toggle="modal" data-bs-target="#SearchModal">
-                        <a class="nav-link" href="avascript:;"><i class='bx bx-search'></i>
+                        <a class="nav-link" href="javascript:;"><i class="fa-solid fa-magnifying-glass"></i>
                         </a>
                     </li>
 
                     <li class="nav-item dark-mode d-none d-sm-flex">
-                        <a class="nav-link dark-mode-icon" href="javascript:;"><i class='bx bx-moon'></i>
+                        <a class="nav-link dark-mode-icon" href="javascript:;">
                         </a>
                     </li>
 
@@ -26,7 +26,7 @@
 
                     <li class="nav-item dropdown dropdown-large">
                         <a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative" href="#" data-bs-toggle="dropdown"><span class="alert-count">3</span>
-                            <i class='bx bx-bell'></i>
+                            <i class="fa-regular fa-bell"></i>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end">
                             <a href="javascript:;">
@@ -39,7 +39,7 @@
                                 <a class="dropdown-item" href="javascript:;">
                                     <div class="d-flex align-items-center">
                                         <div class="user-online">
-                                            <img src="assets/images/avatars/avatar-1.png" class="msg-avatar" alt="user avatar">
+                                            <img src="{{ asset("backend/assets/images/avatars/avatar_2.jpg") }}" class="msg-avatar" alt="user avatar">
                                         </div>
                                         <div class="flex-grow-1">
                                             <h6 class="msg-name">Lily Rose<span class="msg-time float-end">5 sec
@@ -50,19 +50,19 @@
                                 </a>
                                 <a class="dropdown-item" href="javascript:;">
                                     <div class="d-flex align-items-center">
-                                        <div class="notify bg-light-danger text-danger">dc
+                                        <div class="notify bg-light-danger text-danger">ARM
                                         </div>
                                         <div class="flex-grow-1">
                                             <h6 class="msg-name">New Booking <span class="msg-time float-end">2 min
                                         ago</span></h6>
-                                            <p class="msg-info">You have recived new booking</p>
+                                            <p class="msg-info">You have received new booking</p>
                                         </div>
                                     </div>
                                 </a>
                                 <a class="dropdown-item" href="javascript:;">
                                     <div class="d-flex align-items-center">
                                         <div class="user-online">
-                                            <img src="assets/images/avatars/avatar-2.png" class="msg-avatar" alt="user avatar">
+                                            <img src="{{ asset("backend/assets/images/avatars/avatar_2.jpg") }}" class="msg-avatar" alt="user avatar">
                                         </div>
                                         <div class="flex-grow-1">
                                             <h6 class="msg-name">Li Korng <span class="msg-time float-end">14
@@ -81,13 +81,13 @@
                     </li>
                     <li class="nav-item dropdown dropdown-large">
                         <a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <span class="alert-count">3</span>
-                            <i class='bx bx-shopping-bag'></i>
+                            <i class="fa-solid fa-cart-plus"></i>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end">
                             <a href="javascript:;">
                                 <div class="msg-header">
-                                    <p class="msg-header-title">My Cart</p>
-                                    <p class="msg-header-badge">3 Items</p>
+                                    <p class="msg-header-title">Cart</p>
+                                    <p class="msg-header-badge">3 Booking</p>
                                 </div>
                             </a>
                             <div class="header-message-list">
@@ -100,7 +100,7 @@
                                         </div>
                                         <div class="flex-grow-1">
                                             <h6 class="cart-product-title mb-0">Queen Room</h6>
-                                            <p class="cart-product-price mb-0">2 peolpe</p>
+                                            <p class="cart-product-price mb-0">2 people</p>
                                         </div>
                                         <div class="">
                                             <p class="cart-price mb-0">$30.00</p>
@@ -109,7 +109,7 @@
                                         </div>
                                     </div>
                                 </a>
-                                a class="dropdown-item" href="javascript:;">
+                                <a class="dropdown-item" href="javascript:;">
                                     <div class="d-flex align-items-center gap-3">
                                         <div class="position-relative">
                                             <div class="cart-product rounded-circle bg-light">
@@ -118,7 +118,7 @@
                                         </div>
                                         <div class="flex-grow-1">
                                             <h6 class="cart-product-title mb-0">Queen Room</h6>
-                                            <p class="cart-product-price mb-0">2 peolpe</p>
+                                            <p class="cart-product-price mb-0">2 people</p>
                                         </div>
                                         <div class="">
                                             <p class="cart-price mb-0">$30.00</p>
@@ -127,7 +127,7 @@
                                         </div>
                                     </div>
                                 </a>
-                                a class="dropdown-item" href="javascript:;">
+                                <a class="dropdown-item" href="javascript:;">
                                     <div class="d-flex align-items-center gap-3">
                                         <div class="position-relative">
                                             <div class="cart-product rounded-circle bg-light">
