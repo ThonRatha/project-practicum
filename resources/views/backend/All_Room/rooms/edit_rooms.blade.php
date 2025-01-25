@@ -220,7 +220,9 @@
                                     <i class="fa-solid fa-plus">Add New</i>
                                 </a>
                                 <div class="roomnoHide" id="roomnoHide">
-                                    <form action="">
+                                    <form action="{{ route('store.room.no', $editData->id) }}" method="POST">
+                                        @csrf
+                                        <input type="hidden" name="roomtype_id" value="{{ $editData->room_type_id }}">
                                         <div class="row">
                                             <div class="col-md-4">
                                                 <label for="input2" class="form-label">Room Number</label>
@@ -228,7 +230,7 @@
                                             </div>
                                             <div class="col-md-4">
                                                 <label for="input7" class="form-label">Status</label>
-                                                <select name="view" id="input7" class="form-select">
+                                                <select name="status" id="input7" class="form-select">
                                                     <option selected="">Select Status</option>
                                                     <option value="Active">Active</option>
                                                     <option value="Inactive">Inactive</option>
@@ -249,15 +251,17 @@
 										</tr>
 									</thead>
 									<tbody>
-										<tr>
-											<td>Mark</td>
-											<td>Otto</td>
+                                        @foreach ($allroomNo as $item)
+                                        <tr>
+											<td>{{ $item->room_no }}</td>
+											<td>{{ $item->status }}</td>
 											<td>
-                                                <a href="" class="btn btn-outline-success px-2 radius-10">Edit</a>
+                                                <a href="{{ route('edit.roomno', $item->id) }}" class="btn btn-outline-success px-2 radius-10" id="edit">Edit</a>
 
-                                                <a href="" class="btn btn-outline-danger px-2 radius-10" id="delete">Delete</a>
+                                                <a href="{{ route('delete.roomno', $item->id) }}" class="btn btn-outline-danger px-2 radius-10" id="delete">Delete</a>
                                             </td>
 										</tr>
+                                        @endforeach
 									</tbody>
 								</table>
                             </div>
@@ -356,8 +360,8 @@
              counter -= 1
        });
     });
- </script>
- <!--========== End of Basic Plan Facilities ==============-->
+</script>
+<!--========== End of Basic Plan Facilities ==============-->
 <script>
     $('#roomnoHide').hide();
     $('#roomview').show();

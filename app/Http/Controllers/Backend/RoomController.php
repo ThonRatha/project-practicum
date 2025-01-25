@@ -19,7 +19,8 @@ class RoomController extends Controller
         $basic_facility = Facility::where('room_id', $id)->get();
         $multiimgs = MultiImage::where('room_id', $id)->get();
         $editData = Room::find($id);
-        return view('backend.All_Room.rooms.edit_rooms', compact('editData', 'basic_facility', 'multiimgs'));
+        $allroomNo = RoomNumber::where('room_id', $id)->get();
+        return view('backend.All_Room.rooms.edit_rooms', compact('editData', 'basic_facility', 'multiimgs', 'allroomNo'));
     }
 
     public function UpdateRoom(Request $request, $id){
@@ -122,5 +123,54 @@ class RoomController extends Controller
         );
 
         return redirect()->back()->with($notification);
+    }
+
+    public function StoreRoomNumber(Request $request, $id) {
+
+        $data = new RoomNumber();
+        $data->room_id = $id;
+        $data->roomtype_id = $request->roomtype_id;
+        $data->room_no = $request->room_no;
+        $data->status = $request->status;
+        $data->save();
+
+        $notification = array (
+            'message' => 'Room Number Added Successfully',
+            'alert type' => 'success'
+        );
+
+        return redirect()->back()->with($notification);
+    }
+
+    public function EditRoomNumber($id){
+
+        $editroomno = RoomNumber::find($id);
+        return view('backend.All_Room.rooms.edit_room_no', compact('editroomno'));
+    }
+
+    public function UpdateRoomNumber(Request $request, $id){
+
+        $data = RoomNumber::find($id);
+        $data->room_no = $request->room_no;
+        $data->status = $request->status;
+        $data->save();
+
+        $notification = array (
+            'message' => 'Room Number Updated Successfully',
+            'alert type' => 'success'
+        );
+
+        return redirect()->route('room.type.list')->with($notification);
+    }
+
+    public function DeleteRoomNumber($id){
+
+        RoomNumber::find($id)->delete();
+        $notification = array (
+            'message' => 'Room Number Deleted Successfully',
+            'alert type' => 'success'
+        );
+
+        return redirect()->route('room.type.list')->with($notification);
     }
 }
