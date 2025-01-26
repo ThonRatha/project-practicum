@@ -1,23 +1,26 @@
+@php
+    $bookarea = App\Models\BookArea::find(1);
+@endphp
+
 <div class="book-area-two pt-100 pb-70">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <div class="book-content-two">
                     <div class="section-title">
-                        <span class="sp-color">MAKE A QUICK BOOKING</span>
-                        <h2>Spend your vocation with Us and Get a Quick Booking Now!</h2>
+                        <span class="sp-color">{{ $bookarea->short_title }}</span>
+                        <h2>{{ $bookarea->main_title }}</h2>
                         <p>
-                            FlexiBooking is one of the best resorts in the Koh Kong Province and that's why you will get a luxury life period on your holiday. We always
-                            provide you a special support for all of our guests and that's will  be the main reason to be the most popular.
+                            {{ $bookarea->short_desc }}
                         </p>
                     </div>
-                    <a href="#" class="default-btn btn-bg-three">Quick Booking</a>
+                    <a href="{{ $bookarea->url_link }}" class="default-btn btn-bg-three">Quick Booking</a>
                 </div>
             </div>
 
             <div class="col-lg-6">
                 <div class="book-img-2">
-                    <img src="{{ asset('frontend/assets/img/room/room-5.jpg') }}" alt="Images">
+                    <img src="{{ asset($bookarea->image) }}" alt="Images">
                 </div>
             </div>
         </div>

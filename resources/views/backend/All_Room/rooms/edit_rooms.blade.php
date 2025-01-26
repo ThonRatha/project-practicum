@@ -256,9 +256,9 @@
 											<td>{{ $item->room_no }}</td>
 											<td>{{ $item->status }}</td>
 											<td>
-                                                <a href="{{ route('edit.roomno', $item->id) }}" class="btn btn-outline-success px-2 radius-10" id="edit">Edit</a>
+                                                <a href="{{ route('edit.roomno', $item->id) }}" class="btn btn-outline-success px-3 radius-10" id="edit" style="margin-right: 16px;">Edit</a>
 
-                                                <a href="{{ route('delete.roomno', $item->id) }}" class="btn btn-outline-danger px-2 radius-10" id="delete">Delete</a>
+                                                <a href="{{ route('delete.roomno', $item->id) }}" class="btn btn-outline-danger px-3 radius-10" id="delete">Delete</a>
                                             </td>
 										</tr>
                                         @endforeach

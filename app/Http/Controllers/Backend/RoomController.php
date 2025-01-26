@@ -7,6 +7,7 @@ use App\Models\Facility;
 use App\Models\MultiImage;
 use App\Models\RoomNumber;
 use App\Models\Room;
+use App\Models\RoomType;
 use Intervention\Image\Laravel\Facades\Image;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -172,5 +173,33 @@ class RoomController extends Controller
         );
 
         return redirect()->route('room.type.list')->with($notification);
+    }
+
+    public function DeleteRoom(Request $request, $id){
+        $room = Room::find($id);
+
+        if(file_exists('upload/room_img/'.$room->image) AND ! empty($room->image)){
+            @unlink('upload/room_img/'.$room->image);
+        }
+        $subimage = MultiImage::where('room_id',$room->id)->get()->toArray();
+        if (!empty($subimage)){
+            foreach($subimage as $value) {
+                if(!empty($value)){
+                    @unlink('upload/room_img/'.$value['multi_img']);
+                }
+            }
+        }
+        RoomType::where('id', $room->room_type_id)->delete();
+        MultiImage::where('room_id', $room->id)->delete();
+        Facility::where('room_id', $room->id)->delete();
+        RoomNumber::where('room_id', $room->id)->delete();
+        $room->delete();
+
+        $notification = array (
+            'message' => 'Room Deleted Successfully',
+            'alert type' => 'success'
+        );
+
+        return redirect()->back()->with($notification);
     }
 }

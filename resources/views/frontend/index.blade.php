@@ -79,7 +79,7 @@
 <!-- Services Area Three -->
 @include('frontend.home.services')
 <!-- Services Area Three End -->
-{{--
+
 <!-- Team Area Three -->
 @include('frontend.home.team')
 <!-- Team Area Three End -->
@@ -94,5 +94,5 @@
 
 <!-- Blog Area -->
 @include('frontend.home.blog')
-<!-- Blog Area End -->  --}}
+<!-- Blog Area End --> 
 @endsection
