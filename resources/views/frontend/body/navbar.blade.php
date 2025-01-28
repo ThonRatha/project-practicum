@@ -19,7 +19,7 @@
                 <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                     <ul class="navbar-nav m-auto">
                         <li class="nav-item">
-                            <a href="#" class="nav-link active">
+                            <a href="{{ url('/') }}" class="nav-link active">
                                 Home
 
                             </a>
@@ -60,41 +60,33 @@
                                 </li>
                             </ul>
                         </li>
+                        @php
+                            $room = App\Models\Room::latest()->get();
+                        @endphp
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{ route('froom.all') }}" class="nav-link">
                                 Rooms
                                 <i class='bx bx-chevron-down'></i>
                             </a>
                             <ul class="dropdown-menu">
+                                @foreach ($room as $item)
                                 <li class="nav-item">
-                                    <a href="room.html" class="nav-link">
-                                        Rooms
-                                    </a>
+                                    <?php if (isset($item['type']['name'])): ?>
+                                        <a href="room-details.html"><?= htmlspecialchars($item['type']['name']) ?></a>
+                                        <?php else: ?>
+                                        <a href="room-details.html">Default Name</a>
+                                    <?php endif; ?>
                                 </li>
-                                <li class="nav-item">
-                                    <a href="room-details.html" class="nav-link">
-                                        Room Details
-                                    </a>
-                                </li>
+                                @endforeach
                             </ul>
                         </li>
-                        <li class="nav-item">
-                            <a href="about.html" class="nav-link">
-                                About Us
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="contact.html" class="nav-link">
-                                Contact Us
-                            </a>
-                        </li>
                         <li class="nav-item-btn">
-                            <a href="#" class="default-btn btn-bg-one border-radius-5">Book Now</a>
+                            <a href="#" class="default-btn btn-bg-one border-radius-5" >Book Now</a>
                         </li>
                     </ul>
 
                     <div class="nav-btn">
-                        <a href="#" class="default-btn btn-bg-one border-radius-5">Book Now</a>
+                        <a href="#" class="default-btn btn-bg-one border-radius-5" style="border: 2px solid #000000;">Book Now</a>
                     </div>
                 </div>
             </nav>

@@ -6,6 +6,7 @@ use App\Http\Controllers\Backend\RoomTypeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\Backend\TeamController;
+use App\Http\Controllers\Frontend\FrontendRoomController;
 use Illuminate\Support\Facades\Route;
 use Intervention\Image\Facades\Image;
 
@@ -87,6 +88,12 @@ Route::controller(RoomController::class)->group(function(){
     Route::get('/edit/roomno/{id}', 'EditRoomNumber')->name('edit.roomno');
     Route::post('/update/roomno/{id}', 'UpdateRoomNumber')->name('update.roomno');
     Route::get('/delete/roomno/{id}', 'DeleteRoomNumber')->name('delete.roomno');
-    
+
     Route::get('/delete/room/{id}', 'DeleteRoom')->name('delete.room');
+});
+
+Route::controller(FrontendRoomController::class)->group(function(){
+
+    Route::get('/rooms/', 'AllFrontendRoomList')->name('froom.all');
+    Route::get('/room/details/{id}', 'RoomDetailsPage');
 });
