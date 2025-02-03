@@ -14,7 +14,7 @@
                             {{ $bookarea->short_desc }}
                         </p>
                     </div>
-                    <a href="{{ $bookarea->url_link }}" class="default-btn btn-bg-three">Quick Booking</a>
+                    <a href="{{ $bookarea->url_link }}" class="default-btn " style="border: 2px solid #1e75d6;">Quick Booking</a>
                 </div>
             </div>
 

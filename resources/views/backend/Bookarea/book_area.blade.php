@@ -9,9 +9,7 @@
         <div class="ps-3">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb mb-0 p-0">
-                    <li class="breadcrumb-item"><a href="javascript:;"></a><i class="fa-solid fa-pen-to-square" style="font-size: 24px; color:#4d90fc"></i>
-                    </li>
-                    <li class="breadcrumb-item active" aria-current="page">Update Book Area</li>
+                    <li class="breadcrumb-item " aria-current="page">Quick Booking</li>
                 </ol>
             </nav>
         </div>
@@ -63,7 +61,7 @@
                                 </div> --}}
                                 <div class="row mb-3">
                                     <div class="form-group col-sm-3">
-                                        <h6 class="mb-0">Photo</h6>
+                                        <h6 class="mb-0">Room Image</h6>
                                     </div>
                                     <div class="form-group col-sm-9 text-secondary">
                                         <input type="file" name="image" class="form-control" id="image" />
@@ -75,14 +73,14 @@
                                         <h6 class="mb-0"></h6>
                                     </div>
                                     <div class="col-sm-9 text-secondary">
-                                        <img id="showImage" src="{{ asset($book->image) }}" alt="Admin" class="rounded-circle p-1 bg-primary" width="80">
+                                        <img id="showImage" src="{{ asset($book->image) }}" style="border: 2px solid #1e75d6;" alt="Admin" width="200px"; height="200px";>
                                     </div>
                                 </div>
 
                                 <div class="row">
                                     <div class="col-sm-3"></div>
                                     <div class="col-sm-9 text-secondary">
-                                        <input type="submit" class="btn btn-primary px-4" value="Save Changes" />
+                                        <input type="submit" class="btn px-3" style="border: 2px solid #1e75d6;" value="SAVE" />
                                     </div>
                                 </div>
                             </div>

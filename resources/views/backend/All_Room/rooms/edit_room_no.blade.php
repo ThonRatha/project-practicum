@@ -9,7 +9,6 @@
         <div class="ps-3">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb mb-0 p-0">
-
                     <li class="breadcrumb-item active" aria-current="page">Edit Room Number</li>
                 </ol>
             </nav>

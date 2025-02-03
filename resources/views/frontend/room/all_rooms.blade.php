@@ -1,6 +1,6 @@
 @extends('frontend.main_master')
 @section('main')
-
+{{--
         <!-- Inner Banner -->
         <div class="inner-banner inner-bg9">
             <div class="container">
@@ -16,21 +16,21 @@
                 </div>
             </div>
         </div>
-        <!-- Inner Banner End -->
+        <!-- Inner Banner End --> --}}
 
         <!-- Room Area -->
         <div class="room-area pt-100 pb-70">
             <div class="container">
                 <div class="section-title text-center">
                     <span class="sp-color">ROOMS</span>
-                    <h2>Our Rooms & Rates</h2>
+                    <h2>Rooms and Rates</h2>
                 </div>
                 <div class="row pt-45">
                     @foreach ($rooms as $item)
                     <div class="col-lg-4 col-md-6">
                         <div class="room-card">
                             <a href="{{ url('room/details/'.$item->id) }}">
-                                <img src="{{ asset('upload/room_img/'.$item->image) }}" alt="Images" style="width: 550px; height:300px;">
+                                <img src="{{ asset('upload/room_img/'.$item->image) }}" alt="Images" style="width: 500px; height:500px;">
                             </a>
                             <div class="content">
                                 <h3>
@@ -41,15 +41,15 @@
                                     @endif
                                 </h3>
                                 <ul>
-                                    <li class="text-color">${{ $item->price }}</li>
-                                    <li class="text-color">Per Night</li>
+                                    <li class="text_color" style="color: #000000;">${{ $item->price }}</li>
+                                    <li class="text_color" style="color: #000000;">Per Night</li>
                                 </ul>
                                 <div class="rating text-color">
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star-half'></i>
+                                    <i class="fa-solid fa-star" style="color: #FDCC0D;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FDCC0D;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FDCC0D;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FDCC0D;"></i>
+                                    <i class="fa-solid fa-star" style="color: #FDCC0D;"></i>
                                 </div>
                             </div>
                         </div>

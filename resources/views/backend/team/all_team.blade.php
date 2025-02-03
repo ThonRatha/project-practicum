@@ -1,13 +1,14 @@
 @extends('admin.admin_dashboard')
 @section('admin')
 <div class="page-content">
-    <!--breadcrumb-->
+    {{-- <!--breadcrumb-->
     <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
 
         <div class="ps-3">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb mb-0 p-0">
                     <a href="{{ route('add.team') }}">
+                        <button type="button" class="btn btn-outline-primary px-3 radius-10" style="margin-right: 16px;">Add</button>
                         <button type="button" class="btn btn-outline-primary px-5 radius-10">Add Team</button>
                     </a>
                 </ol>
@@ -16,8 +17,17 @@
         </div>
 
     </div>
-    <!--end breadcrumb-->
-    <h6 class="mb-0 px-3">All Team Members</h6>
+    <!--end breadcrumb--> --}}
+    <div class="one">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h6 class="mb-0 px-3">All Team Members</h6>
+            <a href="{{ route('add.room.type') }}">
+                <button type="button" class="btn btn-outline-primary px-3 radius-10" style="margin-right: 16px;">Add</button>
+            </a>
+        </div>
+        <hr/>
+    </div>
+    {{-- <h6 class="mb-0 px-3">All Team Members</h6> --}}
     <hr/>
     <div class="card">
         <div class="card-body">
@@ -45,9 +55,9 @@
                             <td>{{ $item -> position }}</td>
                             <td>{{ $item -> facebook }}</td>
                             <td>
-                                <a href="{{ route('edit.team', $item->id) }}" class="btn btn-outline-success px-5 radius-10">Edit</a>
+                                <a href="{{ route('edit.team', $item->id) }}" class="btn btn-outline-success px-3 radius-10" id="edit" style="margin-right: 16px;">Edit</a>
 
-                                <a href="{{ route('delete.team', $item->id) }}" class="btn btn-outline-danger px-5 radius-10" id="delete">Delete</a>
+                                <a href="{{ route('delete.team', $item->id) }}" class="btn btn-outline-danger px-3 radius-10" id="delete">Delete</a>
                             </td>
                         </tr>
                         @endforeach

@@ -20,7 +20,7 @@
                     <ul class="navbar-nav m-auto">
                         <li class="nav-item">
                             <a href="{{ url('/') }}" class="nav-link active">
-                                Home
+                                HOME
 
                             </a>
 
@@ -28,19 +28,19 @@
 
                         <li class="nav-item">
                             <a href="#" class="nav-link">
-                                Blog
+                                BLOG
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="contact.html" class="nav-link">
-                                Coupon
+                                COUPON
                             </a>
                         </li>
 
                         <li class="nav-item">
                             <a href="#" class="nav-link">
-                                Services
-                                <i class='bx bx-chevron-down'></i>
+                                SERVICE
+
                             </a>
                             <ul class="dropdown-menu">
                                 <li class="nav-item">
@@ -65,8 +65,7 @@
                         @endphp
                         <li class="nav-item">
                             <a href="{{ route('froom.all') }}" class="nav-link">
-                                Rooms
-                                <i class='bx bx-chevron-down'></i>
+                                ROOMS
                             </a>
                             <ul class="dropdown-menu">
                                 @foreach ($room as $item)
@@ -81,12 +80,12 @@
                             </ul>
                         </li>
                         <li class="nav-item-btn">
-                            <a href="#" class="default-btn btn-bg-one border-radius-5" >Book Now</a>
+                            <a href="#" class="default-btn">Book Now</a>
                         </li>
                     </ul>
 
                     <div class="nav-btn">
-                        <a href="#" class="default-btn btn-bg-one border-radius-5" style="border: 2px solid #000000;">Book Now</a>
+                        <a href="#" class="default-btn" style="border: 2px solid #1e75d6;">Book Now</a>
                     </div>
                 </div>
             </nav>

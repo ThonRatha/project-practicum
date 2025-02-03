@@ -69,7 +69,7 @@
                                                     <select name="view" id="input7" class="form-select">
                                                         <option selected="">Choose</option>
                                                         <option value="Garden View" {{ $editData->view == 'Garden View'?'selected':'' }}>Garden View</option>
-                                                        <option value="Sea View" {{ $editData->view == 'Sea View'?'selected':'' }}>Sea View</option>
+                                                        <option value="Sea View" {{ $editData->view == 'Sea View'?'selected':'' }}>Pool View</option>
                                                     </select>
                                                 </div>
                                                 <div class="col-md-4">
@@ -99,7 +99,8 @@
                                                 <div class="col-md-4">
                                                     <label for="input3" class="form-label">Main Image</label>
                                                     <input type="file" name="image" class="form-control" id="image">
-                                                    <img id="showImage" src="{{ (!empty($editData->image)) ? url('upload/room_img/'.$editData->image) : url('upload/no_image.jpg') }}" alt="Admin"
+                                                    <img id="showImage" src="{{ (!empty($editData->image)) ? url('upload/room_img/'.$editData->image) :
+                                                    url('upload/no_image.jpg') }}" alt="Admin"
                                                         class="bg-primary" width="80" height="70">
                                                 </div>
 
@@ -109,8 +110,8 @@
 
                                                     @foreach ($multiimgs as $item)
                                                     <img src="{{ (!empty($item->multi_img)) ? url('upload/room_img/'.$item->multi_img) : url('upload/no_image.jpg') }}" alt="Admin"
-                                                    class="bg-primary pt-5" width="80" height="70">
-                                                    <a href="{{ route('multi.image.delete', $item->id) }}"><i class="fa-regular fa-circle-xmark"></i></a>
+                                                    width="80" height="80" style="object-fit: cover; border-radius: 5px;>
+                                                    <a href="{{ route('multi.image.delete', $item->id) }}><i class="fa-regular fa-circle-xmark"></i></a>
                                                     @endforeach
 
                                                     <div class="row" id="preview_img"></div>
@@ -122,41 +123,21 @@
                                                         {{-- If there have existing data, so that is existing data will be executed --}}
                                                         <div class="basic_facility_section_remove" id="basic_facility_section_remove">
                                                             <div class="row add_item">
-                                                                <div class="col-md-8">
+                                                                <div class="col-md-6">
                                                                     <label for="facility_name" class="form-label"> Room Facilities </label>
                                                                     <select name="facility_name[]" id="facility_name" class="form-control">
                                                                         <option value="">Select Facility</option>
+                                                                        <option value="Minibar" {{$item->facility_name == 'Complimentary Breakfast'?'selected':''}}> Minibar</option>
+                                                                        <option value="Work Desk"  {{$item->facility_name == 'Work Desk'?'selected':''}}>Work Desk</option>
+                                                                        <option value="Free Wi-Fi" {{$item->facility_name == 'Free Wi-Fi'?'selected':''}}>Free Wi-Fi</option>
                                                                         <option value="Complimentary Breakfast" {{ $item->facility_name == 'Complimentary Breakfast' ? 'selected' : '' }}>Complimentary Breakfast</option>
-
-                                                        <option value="32/42 inch LED TV"  {{$item->facility_name == 'Complimentary Breakfast'?'selected':''}}> 32/42 inch LED TV</option>
-
-                                                    <option value="Smoke alarms"  {{$item->facility_name == 'Smoke alarms'?'selected':''}}>Smoke alarms</option>
-
-                                                    <option value="Minibar" {{$item->facility_name == 'Complimentary Breakfast'?'selected':''}}> Minibar</option>
-
-                                                    <option value="Work Desk"  {{$item->facility_name == 'Work Desk'?'selected':''}}>Work Desk</option>
-
-                                                    <option value="Free Wi-Fi" {{$item->facility_name == 'Free Wi-Fi'?'selected':''}}>Free Wi-Fi</option>
-
-                                                    <option value="Safety box" {{$item->facility_name == 'Safety box'?'selected':''}} >Safety box</option>
-
-                                                    <option value="Rain Shower" {{$item->facility_name == 'Rain Shower'?'selected':''}} >Rain Shower</option>
-
-                                                    <option value="Slippers" {{$item->facility_name == 'Slippers'?'selected':''}} >Slippers</option>
-
-                                                    <option value="Hair dryer" {{$item->facility_name == 'Hair dryer'?'selected':''}} >Hair dryer</option>
-
-                                                    <option value="Wake-up service"  {{$item->facility_name == 'Wake-up service'?'selected':''}}>Wake-up service</option>
-
-                                                    <option value="Laundry & Dry Cleaning" {{$item->facility_name == 'Laundry & Dry Cleaning'?'selected':''}} >Laundry & Dry Cleaning</option>
-
-                                                    <option value="Electronic door lock"  {{$item->facility_name == 'Electronic door lock'?'selected':''}}>Electronic door lock</option>
+                                                                        <option value="Laundry & Dry Cleaning" {{$item->facility_name == 'Laundry & Dry Cleaning'?'selected':''}} >Laundry and Dry Cleaning</option>
                                                                 </select>
                                                                 </div>
-                                                                <div class="col-md-4">
+                                                                <div class="col-md-6">
                                                                     <div class="form-group" style="padding-top: 30px;">
-                                                                        <a class="btn btn-success addeventmore"><i class="fa fa-plus-circle"></i></a>
-                                                                        <span class="btn btn-danger btn-sm removeeventmore"><i class="fa fa-minus-circle"></i></span>
+                                                                        <a class="btn addeventmore"><i class="fa-solid fa-plus"></i></a>
+                                                                        <span class="btn removeeventmore"><i class="fa-solid fa-minus"></i></span>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -169,39 +150,29 @@
                                                                     <div class="col-md-6">
                                                                         <label for="basic_facility_name" class="form-label">Room Facilities </label>
                                                                         <select name="facility_name[]" id="basic_facility_name" class="form-control">
-                                                    <option value="">Select Facility</option>
-                                                    <option value="Complimentary Breakfast">Complimentary Breakfast</option>
-                                                    <option value="32/42 inch LED TV" > 32/42 inch LED TV</option>
-                                                    <option value="Smoke alarms" >Smoke alarms</option>
-                                                    <option value="Minibar"> Minibar</option>
-                                                    <option value="Work Desk" >Work Desk</option>
-                                                    <option value="Free Wi-Fi">Free Wi-Fi</option>
-                                                    <option value="Safety box" >Safety box</option>
-                                                    <option value="Rain Shower" >Rain Shower</option>
-                                                    <option value="Slippers" >Slippers</option>
-                                                    <option value="Hair dryer" >Hair dryer</option>
-                                                    <option value="Wake-up service" >Wake-up service</option>
-                                                    <option value="Laundry & Dry Cleaning" >Laundry & Dry Cleaning</option>
-                                                    <option value="Electronic door lock" >Electronic door lock</option>
+                                                                            <option value="">Select Facility</option>
+                                                                            <option value="Minibar"> Minibar</option>
+                                                                            <option value="Work Desk" >Work Desk</option>
+                                                                            <option value="Free Wi-Fi">Free Wi-Fi</option>
+                                                                            <option value="Complimentary Breakfast">Complimentary Breakfast</option>>
+                                                                            <option value="Laundry & Dry Cleaning" >Laundry and Dry Cleaning</option>
                                                                         </select>
                                                                     </div>
                                                                     <div class="col-md-6">
                                                                         <div class="form-group" style="padding-top: 30px;">
-                                                            <a class="btn btn-success addeventmore"><i class="lni lni-circle-plus"></i></a>
-
-                                                            <span class="btn btn-danger removeeventmore"><i class="lni lni-circle-minus"></i></span>
+                                                                            <a class="btn pt-3 addeventmore"><i class="fa-solid fa-plus"></i></a>
+                                                                            <span class="btn pt-3 removeeventmore"><i class="fa-solid fa-minus"></i></span>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
-
                                                         @endforelse
                                                     </div>
                                                     </div>
                                                     <br>
                                                 <div class="col-md-12">
                                                     <div class="d-md-flex d-grid align-items-center gap-3">
-                                                        <button type="submit" class="btn btn-primary px-4">Save Changes</button>
+                                                        <button type="submit" class="btn px-3" style="border: 2px solid #1e75d6;">SAVE</button>
                                                     </div>
                                                 </div>
                                             </form>
@@ -216,8 +187,9 @@
                     <div class="tab-pane fade" id="primaryprofile" role="tabpanel">
                         <div class="card">
                             <div class="card-body">
-                                <a class="card-title btn btn-outline-primary float-right" onclick="addRoomNo()" id="addRoomNo">
-                                    <i class="fa-solid fa-plus">Add New</i>
+                                <a class="card-title float-right mb-16px" onclick="addRoomNo()" id="addRoomNo">
+                                    {{-- <i class="fa-solid fa-plus"> Add New</i> --}}
+                                    <button type="submit" class="btn btn-outline-primary" style="margin-top: 28px">Add New</button>
                                 </a>
                                 <div class="roomnoHide" id="roomnoHide">
                                     <form action="{{ route('store.room.no', $editData->id) }}" method="POST">

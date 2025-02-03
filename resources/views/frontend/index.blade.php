@@ -16,16 +16,16 @@
 <div class="banner-form-area">
     <div class="container">
         <div class="banner-form">
-            <form>
+            <form method="get" action="{{ route('booking.search') }}">
                 <div class="row align-items-center">
                     <div class="col-lg-3 col-md-3">
                         <div class="form-group">
                             <label>CHECK IN</label>
                             <div class="input-group">
-                                <input id="datetimepicker" type="text" class="form-control" placeholder="10/11/2024">
+                                <input autocomplete="off" type="text" required name="check_in" class="form-control dt_picker" placeholder="yy-mm-dd">
                                 <span class="input-group-addon"></span>
                             </div>
-                            <i class='bx bxs-chevron-down'></i>
+                            {{-- <i class="fa-solid fa-calendar-days"></i> --}}
                         </div>
                     </div>
 
@@ -33,17 +33,17 @@
                         <div class="form-group">
                             <label>CHECK OUT</label>
                             <div class="input-group">
-                                <input id="datetimepicker" type="text" class="form-control" placeholder="11/11/2024">
+                                <input autocomplete="off" type="text" required name="check_out" class="form-control dt_picker" placeholder="yy-mm-dd">
                                 <span class="input-group-addon"></span>
                             </div>
-                            <i class='bx bxs-chevron-down'></i>
+                            {{-- <i class="fa-solid fa-calendar-days"></i> --}}
                         </div>
                     </div>
 
                     <div class="col-lg-2 col-md-2">
                         <div class="form-group">
                             <label>GUESTS</label>
-                            <select class="form-control">
+                            <select name="person" class="form-control">
                                 <option>01</option>
                                 <option>02</option>
                                 <option>03</option>
@@ -53,7 +53,7 @@
                     </div>
 
                     <div class="col-lg-4 col-md-4">
-                        <button type="submit" class="default-btn btn-bg-one border-radius-5">
+                        <button type="submit" class="default-btn" style="border: 2px solid #1e75d6;">
                             Check Availability
                         </button>
                     </div>
@@ -92,7 +92,7 @@
 @include('frontend.home.faq')
 <!-- FAQ Area End -->
 
-<!-- Blog Area -->
+{{-- <!-- Blog Area -->
 @include('frontend.home.blog')
-<!-- Blog Area End --> 
+<!-- Blog Area End --> --}}
 @endsection

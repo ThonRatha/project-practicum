@@ -42,7 +42,6 @@ class RoomController extends Controller
 
         //Update single image
         if($request->file('image')){
-
             $image = $request->file('image');
             $name_gen = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
             Image::read($image)->resize(550, 850)->save('upload/room_img/' . $name_gen);

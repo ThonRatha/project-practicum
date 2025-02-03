@@ -351,78 +351,15 @@ a {
 
 .back-to-top:hover {
 	color: #fff;
-	background-color: #000;
+	background-color: #000000;
 	transition: all .5s
 }
 
 .breadcrumb-title {
 	font-size: 20px;
-	border-right: 1.5px solid #aaa4a4
-}
-
-.page-breadcrumb .breadcrumb li.breadcrumb-item {
-	font-size: 16px
-}
-
-.page-breadcrumb .breadcrumb-item+.breadcrumb-item::before {
-	display: inline-block;
-	padding-right: .5rem;
-	color: #6c757d;
-	font-family: LineIcons;
-	content: "\ea5c"
-}
-
-.icon-badge {
-	width: 45px;
-	height: 45px;
-	background: #f2f2f2;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border-radius: 50%
-}
-
-.widgets-icons {
-	width: 50px;
-	height: 50px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background-color: #ededed;
-	font-size: 26px;
-	border-radius: 10px
-}
-
-.widgets-icons-2 {
-	width: 56px;
-	height: 56px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background-color: #ededed;
-	font-size: 27px;
-	border-radius: 10px
-}
-
-#geographic-map {
-	width: 100%;
-	height: 440px
-}
-
-#geographic-map-2 {
-
-	width: 100%;
-
-	height: 300px
-
-}
-
-#geographic-map-3 {
-
-	width: 100%;
-
-	height: 350px
-
+    margin-left: 20px;
+    color: #000000;
+	border-right: 1.5px solid #000000;
 }
 
 .product-img {

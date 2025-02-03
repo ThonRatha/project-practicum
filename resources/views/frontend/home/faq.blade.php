@@ -13,8 +13,8 @@
                         <ul class="accordion">
                             <li class="accordion-item">
                                 <a class="accordion-title" href="javascript:void(0)">
-                                    <i class='bx bx-plus'></i>
-                                    How I Will Book a Room or Resort?
+                                    <i class="sp-color fa-solid fa-chevron-down"></i>
+                                    How can i get discount?
                                 </a>
 
                                 <div class="accordion-content">
@@ -28,8 +28,8 @@
 
                             <li class="accordion-item">
                                 <a class="accordion-title" href="javascript:void(0)">
-                                    <i class='bx bx-plus'></i>
-                                    How I Will Be Able to Add on the Admin Portal?
+                                    <i class="sp-color fa-solid fa-chevron-down"></i>
+                                    How far from Pub Street?
                                 </a>
 
                                 <div class="accordion-content">
@@ -43,8 +43,8 @@
 
                             <li class="accordion-item">
                                 <a class="accordion-title" href="javascript:void(0)">
-                                    <i class='bx bx-plus'></i>
-                                    What are the Benefits of These Agencies?
+                                    <i class="sp-color fa-solid fa-chevron-down"></i>
+                                    How many maximum days that i can book?
                                 </a>
 
                                 <div class="accordion-content">
@@ -56,11 +56,11 @@
                                 </div>
                             </li>
 
-                            <li class="accordion-item">
-                                <a class="accordion-title active" href="javascript:void(0)">
-                                    <i class='bx bx-plus'></i>
+                            {{-- <li class="accordion-item">
+
+                                    <i class="fa-solid fa-chevron-down"></i>
                                     How I Will Make Payment for Room Book?
-                                </a>
+
 
                                 <div class="accordion-content show">
                                     <p>
@@ -69,7 +69,7 @@
                                         vel ultricies eu, vulputate at felis.
                                     </p>
                                 </div>
-                            </li>
+                            </li> --}}
                         </ul>
                     </div>
                 </div>
@@ -77,7 +77,7 @@
 
             <div class="col-lg-6">
                 <div class="faq-img-3">
-                    <img src="{{ asset('frontend/assets/img/faq/faq-img3.jpg') }}" alt="Images">
+                    <img src="{{ asset('frontend/assets/img/k.jpg') }}" alt="Images">
                 </div>
             </div>
         </div>

@@ -131,12 +131,6 @@ class TeamController extends Controller
 
     public function BookAreaUpdate(Request $request) {
         $book_id = $request->id;
-
-        // if ($book_id) {
-        //     echo $book_id->id;
-        // } else {
-        //     echo "Record not found.";
-        // }
         if($request->file('image')) {
             $image = $request->file('image');
         $name_gen = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();

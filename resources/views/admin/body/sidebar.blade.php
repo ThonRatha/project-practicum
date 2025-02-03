@@ -15,6 +15,21 @@
                 <div class="menu-title">Dashboard</div>
             </a>
         </li>
+
+        <li>
+            <a href="javascript:;" class="has-arrow">
+                <div class="parent-icon"><i class="fa-solid fa-cart-arrow-down"></i>
+                </div>
+                <div class="menu-title">Booking</div>
+            </a>
+            <ul>
+                <li> <a href="#"><i class="fa-solid fa-bed"></i>Rooms</a>
+                </li>
+                <li> <a href="#"><i class="fa-solid fa-list-check"></i>Room Details</a>
+                </li>
+            </ul>
+        </li>
+        <li class="menu-label">Admin Manage</li>
         <li>
             <a href="javascript:;" class="has-arrow">
                 <div class="parent-icon">
@@ -24,7 +39,7 @@
             </a>
 
             <ul>
-                <li> <a href="{{ route('book.area') }}"><i class="fa-solid fa-pen-to-square"></i></i>Update Book Area</a>
+                <li> <a href="{{ route('book.area') }}"><i class="fa-solid fa-pen-to-square"></i>Update Book Area</a>
                 </li>
             </ul>
         </li>
@@ -46,23 +61,9 @@
                 <div class="menu-title">Manage Team</div>
             </a>
             <ul>
-                <li> <a href="{{ route('all.team') }}"><i class="fa-solid fa-bars"></i></i>All Team</a>
+                <li> <a href="{{ route('all.team') }}"><i class="fa-solid fa-bars"></i>All Team</a>
                 </li>
-                <li> <a href="{{ route('add.team') }}"><i class="fa-solid fa-user-plus"></i></i>Add Team</a>
-                </li>
-            </ul>
-        </li>
-        <li class="menu-label">UI Elements</li>
-        <li>
-            <a href="javascript:;" class="has-arrow">
-                <div class="parent-icon"><i class="fa-solid fa-cart-arrow-down"></i>
-                </div>
-                <div class="menu-title">Booking</div>
-            </a>
-            <ul>
-                <li> <a href="#"><i class="fa-solid fa-bed"></i></i>Rooms</a>
-                </li>
-                <li> <a href="#"><i class="fa-solid fa-list-check"></i></i>Room Details</a>
+                <li> <a href="{{ route('add.team') }}"><i class="fa-solid fa-user-plus"></i>Add Team</a>
                 </li>
             </ul>
         </li>

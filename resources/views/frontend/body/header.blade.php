@@ -14,32 +14,30 @@
                 <div class="header-right">
                     <ul>
                         <li>
-                            <i class='bx bx-home-alt'></i>
+                            <i class="fa-solid fa-location-dot"></i>
                             <a href="#">Phnom Penh</a>
                         </li>
                         <li>
-                            <i class='bx bx-phone'></i>
+                            <i class="fa-solid fa-phone"></i>
                             <a href="#">+885 123456789</a>
                         </li>
 
                         @auth
                         <li>
-                            <i class="bx bxs-user"></i>
-
+                            <i class="fa-solid fa-user"></i>
                             <a href="{{ route('dashboard') }}">Dashboard</a>
                         </li>
                         <li>
-                            <i class='bx bxs-user-rectangle'></i>
+                            <i class="fa-solid fa-right-from-bracket"></i>
                             <a href="{{ route('user.logout') }}">Logout</a>
                         </li>
                         @else
                         <li>
-                            <i class="bx bxs-user"></i>
-
+                            <i class="fa-solid fa-user"></i>
                             <a href="{{ route('login') }}">Login</a>
                         </li>
                         <li>
-                            <i class='bx bxs-user-rectangle'></i>
+                            <i class="fa-solid fa-address-book"></i>
                             <a href="{{ route('register') }}">Register</a>
                         </li>
                         @endauth
