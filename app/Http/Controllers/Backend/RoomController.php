@@ -39,7 +39,7 @@ class RoomController extends Controller
         $room->discount = $request->discount;
         $room->short_desc = $request->short_desc;
         $room->description = $request->description;
-
+        $room->status = 1;
         //Update single image
         if($request->file('image')){
             $image = $request->file('image');

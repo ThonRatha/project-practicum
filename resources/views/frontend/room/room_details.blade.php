@@ -73,9 +73,12 @@
                                         </div>
 
                                         <div class="col-lg-12 col-md-12">
-                                            <button type="submit" class="btn px-3" style="border: 2px solid #1e75d6;">
+                                            <button type="submit" class="default-btn border-radius-5" style="border: 2px solid #1e75d6;">
                                                 Book Now
                                             </button>
+                                            {{-- <button type="submit" class="btn px-3" style="border: 2px solid #1e75d6;">
+                                                Book Now
+                                            </button> --}}
                                         </div>
                                     </div>
                                 </form>
@@ -91,6 +94,7 @@
                                     <img src="{{ asset('upload/room_img/'.$image->multi_img) }}" alt="Images">
                                 </div>
                                 @endforeach
+                            </div>
                             <div class="room-details-title">
                                 <h2>{{ $roomdetails->type->name }}</h2>
                                 <ul>
@@ -244,9 +248,6 @@
                         </div>
                     </div>
                     @endforeach
-
-
-
                 </div>
             </div>
         </div>

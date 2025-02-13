@@ -22,7 +22,7 @@
                         <div class="form-group">
                             <label>CHECK IN</label>
                             <div class="input-group">
-                                <input autocomplete="off" type="text" required name="check_in" class="form-control dt_picker" placeholder="yy-mm-dd">
+                                <input autocomplete="off" type="text" required name="check_in" class="form-control dt_picker" placeholder="yyy-mm-dd">
                                 <span class="input-group-addon"></span>
                             </div>
                             {{-- <i class="fa-solid fa-calendar-days"></i> --}}
@@ -33,7 +33,7 @@
                         <div class="form-group">
                             <label>CHECK OUT</label>
                             <div class="input-group">
-                                <input autocomplete="off" type="text" required name="check_out" class="form-control dt_picker" placeholder="yy-mm-dd">
+                                <input autocomplete="off" type="text" required name="check_out" class="form-control dt_picker" placeholder="yyy-mm-dd">
                                 <span class="input-group-addon"></span>
                             </div>
                             {{-- <i class="fa-solid fa-calendar-days"></i> --}}
