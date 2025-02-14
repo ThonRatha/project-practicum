@@ -44,13 +44,13 @@
 
                     <div class="col-lg-4 col-md-6">
                         <div class="room-card">
-                            <a href="{{ route('search_room_details', $item->id.'&check_in='.old(check_in).'&check_out='.old('check_out').'&person='.old('person'))  }}">
+                            <a href="{{ route('search_room_details',$item->id.'?check_in='.old('check_in').'&check_out='.old('check_out').'&person='.old('person'))}}">
                                 <img src="{{ asset('upload/room_img/'.$item->image) }}" alt="Images" style="width: 500px; height:300px;">
                             </a>
                             <div class="content">
                                 <h6>
                                     @if (isset($item) && isset($item['type']))
-                                    <a href="{{ route('search_room_details', $item->id.'&check_in='.old(check_in).'&check_out='.old('check_out').'&person='.old('person')) }}">{{ $item['type']['name'] }}</a>
+                                    <a href="{{ route('search_room_details', $item->id.'?check_in='.old('check_in').'&check_out='.old('check_out').'&person='.old('person')) }}">{{ $item['type']['name'] }}</a>
                                     @else
                                     <p>Unavailable.</p>
                                     @endif
