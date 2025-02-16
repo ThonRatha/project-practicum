@@ -277,7 +277,7 @@
     }).on('changeDate', function (selected) {
         console.log('ok')
     });
-    
+
     // WOW JS
     new WOW().init();
 
@@ -285,13 +285,13 @@
     $('select').niceSelect();
 
     // Back To Top Js
-    $('body').append('<div id="toTop" class="top-btn"><i class="bx bx-chevrons-up"></i></div>');
+    $('body').append('<div id="toTop" class="top-btn"><i class="fa-solid fa-chevron-up"></i></div>');
     $(window).on('scroll',function () {
-         if ($(this).scrollTop() != 0) {
-             $('#toTop').fadeIn();
-         } else {
-             $('#toTop').fadeOut();
-         }
+        if ($(this).scrollTop() != 0) {
+            $('#toTop').fadeIn();
+        } else {
+            $('#toTop').fadeOut();
+        }
     });
     $('#toTop').on('click',function(){
         $("html, body").animate({ scrollTop: 0 }, 1000);

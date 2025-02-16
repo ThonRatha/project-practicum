@@ -1,31 +1,12 @@
 @extends('frontend.main_master')
 @section('main')
-{{--
-        <!-- Inner Banner -->
-        <div class="inner-banner inner-bg10">
-            <div class="container">
-                <div class="inner-title">
-                    <ul>
-                        <li>
-                            <a href="index.html">Home</a>
-                        </li>
-                        <li><i class="fa-solid fa-arrow-right"></i></li>
-                        <li>Room Details </li>
-                    </ul>
-                    <h3>{{ $roomdetails->type->name }}</h3>
-                </div>
-            </div>
-        </div>
-        <!-- Inner Banner End --> --}}
-
-        <!-- Room Details Area End -->
         <div class="room-details-area pt-100 pb-70">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="room-details-side">
                             <div class="side-bar-form">
-                                <h3>Booking Form</h3>
+                                <h3>BOOKING FORM</h3>
                                 <form>
                                     <div class="row align-items-center">
                                         <div class="col-lg-12">
@@ -57,6 +38,7 @@
                                                     <option>01</option>
                                                     <option>02</option>
                                                     <option>03</option>
+                                                    <option>04</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -68,17 +50,15 @@
                                                     <option>01</option>
                                                     <option>02</option>
                                                     <option>03</option>
+                                                    <option>04</option>
                                                 </select>
                                             </div>
                                         </div>
 
-                                        <div class="col-lg-12 col-md-12">
+                                        <div class=" btn col-lg-12 col-md-12">
                                             <button type="submit" class="default-btn border-radius-5" style="border: 2px solid #1e75d6;">
                                                 Book Now
                                             </button>
-                                            {{-- <button type="submit" class="btn px-3" style="border: 2px solid #1e75d6;">
-                                                Book Now
-                                            </button> --}}
                                         </div>
                                     </div>
                                 </form>
@@ -99,7 +79,7 @@
                                 <h2>{{ $roomdetails->type->name }}</h2>
                                 <ul>
                                     <li>
-                                        <b> Basic : ${{ $roomdetails->price }}/ Night</b>
+                                        <b> Price : ${{ $roomdetails->price }} / Room / Night</b>
                                     </li>
 
                                 </ul>
@@ -119,14 +99,13 @@
 <div class="row">
     <div class="col-lg-6">
     <div class="services-bar-widget">
-                                {{-- <h3 class="title">Download Brochures</h3> --}}
         <div class="side-bar-list">
             <ul>
                 <li>
-                    <a href="#"> <b>Capacity : </b> {{ $roomdetails->room_capacity }} Person </a>
+                    <a href="#">Capacity :  {{ $roomdetails->room_capacity }} Persons </a>
                 </li>
                 <li>
-                    <a href="#"> <b>Size : </b> {{ $roomdetails->size }}sqm </a>
+                    <a href="#">Size : {{ $roomdetails->size }} sqm </a>
                 </li>
             </ul>
         </div>
@@ -137,14 +116,13 @@
 
     <div class="col-lg-6">
     <div class="services-bar-widget">
-        {{-- <h3 class="title">Download Brochures</h3> --}}
         <div class="side-bar-list">
             <ul>
                 <li>
-                    <a href="#"> <b>View : </b> {{ $roomdetails->view }} <i class='bx bxs-cloud-download'></i></a>
+                    <a href="#">View : {{ $roomdetails->view }} </a>
                 </li>
                 <li>
-                    <a href="#"> <b>Bad Style : </b> {{ $roomdetails->bed_style }}<i class='bx bxs-cloud-download'></i></a>
+                    <a href="#">Bed Style : {{ $roomdetails->bed_style }}</a>
                 </li>
 
             </ul>

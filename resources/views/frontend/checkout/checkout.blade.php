@@ -105,43 +105,49 @@
                 <div class="col-lg-4">
                     <section class="checkout-area pb-70">
                         <div class="card-body">
-                              <div class="billing-details">
+                            <div class="billing-details">
                                     <h3 class="title">Booking Summary</h3>
                                     <hr>
 
                                     <div style="display: flex">
-                                          <img style="height:100px; width:120px;object-fit: cover" src=" " alt="Images" alt="Images">
-                                          <div style="padding-left: 10px;">
-                                                <a href=" " style="font-size: 20px; color: #595959;font-weight: bold">Room Name</a>
-                                                <p><b>120 / Night</b></p>
-                                          </div>
+                                        <img style="height:100px; width:120px;object-fit: cover" src=" "
+                                        src="{{ (!empty($room->image))? url('upload/room_img/'.$room->image):url('upload/no_image.jpg') }}"  alt="Images" alt="Images">
+                                        <div style="padding-left: 10px;">
+                                                <a href=" " style="font-size: 20px; color: #595959;font-weight: bold">
+                                                    {{ @$room->type->name }}
+                                                </a>
+                                                <p><b>$ {{ $room->price }} / Night</b></p>
+                                        </div>
 
                                     </div>
 
                                     <br>
 
                                     <table class="table" style="width: 100%">
-
-                                          <tr>
-                                                <td><p>Total Night ( 4)</p></td>
-                                                <td style="text-align: right"><p>Room Name</p></td>
-                                          </tr>
-                                          <tr>
-                                                <td><p>Total Room</p></td>
-                                                <td style="text-align: right"><p>3</p></td>
-                                          </tr>
-                                          <tr>
-                                                <td><p>Subtotal</p></td>
-                                                <td style="text-align: right"><p>200</p></td>
-                                          </tr>
-                                          <tr>
-                                                <td><p>Discount</p></td>
-                                                <td style="text-align:right"> <p>Discount</p></td>
-                                          </tr>
-                                          <tr>
-                                                <td><p>Total</p></td>
-                                                <td style="text-align:right"> <p>Total</p></td>
-                                          </tr>
+                                        @php
+                                            $subtotal = $room->price * $nights * $book_data['number_of_rooms'];
+                                            $discount = ($room->discount/100)*$subtotal;
+                                        @endphp
+                                        <tr>
+                                            <td><p>Total Night <br> <b> ({{ $book_data['check_in'] }} - {{ $book_data['check_out'] }})</p></td>
+                                            <td style="text-align: right"></b><p>{{ $nights }} Days</p></td>
+                                        </tr>
+                                        <tr>
+                                            <td><p>Total Room</p></td>
+                                            <td style="text-align: right"><p>{{ $book_data['number_of_rooms'] }}</p></td>
+                                        </tr>
+                                        <tr>
+                                            <td><p>Subtotal</p></td>
+                                            <td style="text-align: right"><p>${{ $subtotal }}</p></td>
+                                        </tr>
+                                        <tr>
+                                            <td><p>Discount</p></td>
+                                            <td style="text-align:right"> <p>${{ $discount }}</p></td>
+                                        </tr>
+                                        <tr>
+                                            <td><p>Total</p></td>
+                                            <td style="text-align:right"> <p>${{ $subtotal-$discount }}</p></td>
+                                        </tr>
                                     </table>
 
                               </div>

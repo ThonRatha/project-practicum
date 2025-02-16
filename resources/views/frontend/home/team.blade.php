@@ -2,7 +2,7 @@
     $team = App\Models\Team::latest()->get();
 @endphp
 
-<div class="team-area-three pt-100 pb-70">
+<div class="team-area-three pb-70">
     <div class="container">
         <div class="section-title text-center">
             <span class="sp-color">Guesthouse's Owner</span>

@@ -87,26 +87,23 @@
                                             <table class="table">
                                                 <tr>
                                                     <td ><p>SubTotal</p></td>
-                                                    <td style="text-align:right"><span class="t_subtotal"></span>0</td>
+                                                    <td style="text-align:right"><span class="t_subtotal"></span></td>
                                                 </tr>
                                                 <tr>
                                                     <td><p>Discount</p></td>
-                                                    <td style="text-align:right"><span class="t_discount"></span>0</td>
+                                                    <td style="text-align:right"><span class="t_discount"></span></td>
                                                 </tr>
                                                 <tr>
                                                     <td><p>Total</p></td>
-                                                    <td style="text-align:right"><span class="t_g_total"></span>0</td>
+                                                    <td style="text-align:right"><span class="t_g_total"></span></td>
                                                 </tr>
                                             </table>
                                         </div>
 
-                                        <div class="col-lg-12 col-md-12">
+                                        <div class="btn col-lg-12 col-md-12">
                                             <button type="submit" class="default-btn border-radius-5" style="border: 2px solid #1e75d6;">
                                                 Book Now
                                             </button>
-                                            {{-- <button type="submit" class="btn px-3" style="border: 2px solid #1e75d6;">
-                                                Book Now
-                                            </button> --}}
                                         </div>
                                     </div>
                                 </form>
@@ -127,7 +124,7 @@
                                 <h2>{{ $roomdetails->type->name }}</h2>
                                 <ul>
                                     <li>
-                                        <b> Basic : ${{ $roomdetails->price }}/ Night</b>
+                                        <b> Price : ${{ $roomdetails->price }}/ Night</b>
                                     </li>
 
                                 </ul>
@@ -147,7 +144,6 @@
 <div class="row">
     <div class="col-lg-6">
     <div class="services-bar-widget">
-                                {{-- <h3 class="title">Download Brochures</h3> --}}
         <div class="side-bar-list">
             <ul>
                 <li>
@@ -169,10 +165,10 @@
         <div class="side-bar-list">
             <ul>
                 <li>
-                    <a href="#"> <b>View : </b> {{ $roomdetails->view }} <i class='bx bxs-cloud-download'></i></a>
+                    <a href="#"> <b>View : </b> {{ $roomdetails->view }}</a>
                 </li>
                 <li>
-                    <a href="#"> <b>Bad Style : </b> {{ $roomdetails->bed_style }}<i class='bx bxs-cloud-download'></i></a>
+                    <a href="#"> <b>Bad Style : </b> {{ $roomdetails->bed_style }}</a>
                 </li>
 
             </ul>

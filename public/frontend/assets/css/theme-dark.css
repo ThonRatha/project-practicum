@@ -60,12 +60,12 @@
 
 .switch-box input:checked + .slider {
   background-color: transparent;
-  border: 1.5px solid #EE786C;
+  border: 1.5px solid #FDCC0D;
 }
 
 .switch-box input:focus + .slider {
-  -webkit-box-shadow: 0 0 1px #EE786C;
-          box-shadow: 0 0 1px #EE786C;
+  -webkit-box-shadow: 0 0 1px #FDCC0D;
+          box-shadow: 0 0 1px #FDCC0D;
 }
 
 .switch-box input:checked + .slider:before {
