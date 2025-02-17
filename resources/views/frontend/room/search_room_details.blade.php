@@ -161,7 +161,6 @@
 
     <div class="col-lg-6">
     <div class="services-bar-widget">
-        {{-- <h3 class="title">Download Brochures</h3> --}}
         <div class="side-bar-list">
             <ul>
                 <li>

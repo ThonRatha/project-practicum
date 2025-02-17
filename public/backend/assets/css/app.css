@@ -1592,21 +1592,6 @@ form select.error:focus {
 	border-color: #e20e22
 }
 
-.bg-facebook {
-	background-color: #3b5998!important
-}
-
-.bg-twitter {
-	background-color: #55acee!important
-}
-
-.bg-google {
-	background-color: #e52d27!important
-}
-
-.bg-linkedin {
-	background-color: #0976b4!important
-}
 
 /* Text Color */
 
@@ -1614,21 +1599,6 @@ form select.error:focus {
     color: #32393f!important
 }
 
-    .text-facebook{
-    color: #3b5998!important
-}
-
-.text-twitter{
-    color: #55acee!important
-}
-
-.text-youtube{
-    color: #e52d27!important
-}
-
-.text-sky-light {
-    color: #b4d2ff;
-}
 
 .section-authentication-signin {
 	height: 100vh

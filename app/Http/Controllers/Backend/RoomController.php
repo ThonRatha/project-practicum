@@ -55,7 +55,7 @@ class RoomController extends Controller
         if($request->facility_name == NULL){
             $notification = array (
                 'message' => 'Sorry! Not Any Basic Facility Select',
-                'alert type' => 'error'
+                'alert_type' => 'error'
             );
 
             return redirect()->back()->with($notification);
@@ -92,7 +92,7 @@ class RoomController extends Controller
         }
         $notification = array (
             'message' => 'Room Updated Successfully',
-            'alert type' => 'success'
+            'alert_type' => 'success'
         );
         return redirect()->back()->with($notification);
     }
@@ -119,7 +119,7 @@ class RoomController extends Controller
 
         $notification = array (
             'message' => 'Multi Image Deleted Successfully',
-            'alert type' => 'success'
+            'alert_type' => 'success'
         );
 
         return redirect()->back()->with($notification);
@@ -136,7 +136,7 @@ class RoomController extends Controller
 
         $notification = array (
             'message' => 'Room Number Added Successfully',
-            'alert type' => 'success'
+            'alert_type' => 'success'
         );
 
         return redirect()->back()->with($notification);
@@ -157,7 +157,7 @@ class RoomController extends Controller
 
         $notification = array (
             'message' => 'Room Number Updated Successfully',
-            'alert type' => 'success'
+            'alert_type' => 'success'
         );
 
         return redirect()->route('room.type.list')->with($notification);
@@ -166,9 +166,10 @@ class RoomController extends Controller
     public function DeleteRoomNumber($id){
 
         RoomNumber::find($id)->delete();
+
         $notification = array (
             'message' => 'Room Number Deleted Successfully',
-            'alert type' => 'success'
+            'alert_type' => 'success'
         );
 
         return redirect()->route('room.type.list')->with($notification);
@@ -196,7 +197,7 @@ class RoomController extends Controller
 
         $notification = array (
             'message' => 'Room Deleted Successfully',
-            'alert type' => 'success'
+            'alert_type' => 'success'
         );
 
         return redirect()->back()->with($notification);
