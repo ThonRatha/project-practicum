@@ -3,9 +3,13 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Booking;
 use App\Models\Room;
+use App\Models\RoomBookedDate;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
+use Carbon\CarbonPeriod;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 
 class BookingController extends Controller
@@ -24,9 +28,9 @@ class BookingController extends Controller
         }else{
             $notification = array (
                 'message' => 'Something went wrong!',
-                'alert type' => 'error'
+                'alert_type' => 'error'
             );
-            return redirect()->back()->with($notification);
+            return redirect('/')->with($notification);
         }
 
     }
@@ -43,7 +47,7 @@ class BookingController extends Controller
         if($request->available_room < $request->number_of_rooms){
             $notification = array (
                 'message' => 'Room Deleted Successfully',
-                'alert type' => 'success'
+                'alert_type' => 'success'
             );
 
             return redirect()->back()->with($notification);
@@ -61,5 +65,75 @@ class BookingController extends Controller
         Session::put('book_date', $data);
 
         return redirect()->route('checkout');
+    }
+    public function CheckoutStore(Request $request) {
+        $this->validate($request,[
+            'name' => 'required',
+            'email' => 'required',
+            'phone' => 'required',
+            'location' => 'required',
+            'address' => 'required',
+            'payment_method' => 'required',
+        ]);
+
+        $book_data = Session::get('book_date');
+            $toDate = Carbon::parse($book_data['check_in']);
+            $fromDate = Carbon::parse($book_data['check_out']);
+            $total_nights = $toDate->diffInDays($fromDate);
+
+            $room = Room::find($book_data['room_id']);
+            $subtotal = $room->price * $total_nights * $book_data['number_of_rooms'] ;
+            $discount = ($room->discount/100)*$subtotal;
+            $total_price = $subtotal-$discount;
+            $code = rand(000000000,999999999);
+
+            $data = new Booking();
+            $data->room_id = $room->id;
+            $data->user_id = Auth::user()->id;
+            $data->check_in = date('Y-m-d', strtotime($book_data['check_in']));
+            $data->check_out = date('Y-m-d', strtotime($book_data['check_out']));
+            $data->person = $book_data['person'];
+            $data->number_of_rooms = $book_data['number_of_rooms'];
+            $data->total_night = $total_nights;
+
+            $data->actual_price = $room->price;
+            $data->subtotal = $subtotal;
+            $data->discount = $discount;
+            $data->total_price = $total_price;
+            $data->payment_method = $request->payment_method;
+            $data->transaction_id = '';
+            $data->payment_status = 0;
+
+            $data->name = $request->name;
+            $data->email = $request->email;
+            $data->phone = $request->phone;
+            $data->province = $request->province;
+            $data->address = $request->address;
+
+            $data->code = $code;
+            $data->status = 0;
+            $data->created_at = Carbon::now();
+            $data->save();
+
+        $sdate = date('Y-m-d', strtotime($book_data['check_in']));
+        $edate = date('Y-m-d', strtotime($book_data['check_out']));
+        $eldate = Carbon::create($edate)->subDay();
+        $d_period = CarbonPeriod::create($sdate, $eldate);
+        foreach($d_period as $period){
+            $booked_dates = new RoomBookedDate();
+            $booked_dates->booking_id = $data->id;
+            $booked_dates->room_id = $room->id;
+            $booked_dates->book_date = date('Y-m-d', strtotime($period));
+            $booked_dates->save();
+        }
+
+        Session::forget('book_date');
+
+        $notification = array (
+            'message' => 'Booking Added Successfully',
+            'alert_type' => 'success'
+        );
+
+        return redirect('/')->with($notification);
     }
 }

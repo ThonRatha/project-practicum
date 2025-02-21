@@ -1,9 +1,10 @@
 @extends('frontend.main_master')
 @section('main')
 <!-- Checkout Area -->
-<section class="checkout-area pt-100 pb-70">
+<section class="checkout-area pb-70">
     <div class="container">
-        <form>
+        <form method="POST" role="form" action="{{ route('checkout.store') }}">
+            @csrf
             <div class="row">
                 <div class="col-lg-8">
                     <div class="billing-details">
@@ -50,7 +51,7 @@
                             <div class="col-lg-12 col-md-6">
                                 <div class="form-group">
                                     <label>Address <span class="required">*</span></label>
-                                    <input type="text" name="address" class="form-control" value="{{\Auth::user()->address}}">
+                                    <input type="text" id="address" name="address" class="form-control" value="{{\Auth::user()->address}}">
                                 </div>
                             </div>
                             {{-- <p>Session Value: {{ json_encode(session('book_date')) }}</p> --}}
@@ -61,7 +62,8 @@
                                     </h3>
                                     <div class="payment-method">
                                         <p>
-                                            <input type="radio" id="direct-bank-transfer" name="payment_method">
+                                            <input type="radio" id="direct-bank-transfer" name="payment_method" value="PWR">
+                                            {{-- PWR = Pay with receptionist --}}
                                             <label for="direct-bank-transfer">Pay with receptionist</label>
                                         </p>
                                         <div class="risk-free">
@@ -69,18 +71,16 @@
                                             <p>Free cancellation before you check in 3 days (property local time)</p>
                                         </div>
                                         <p>
-                                            <input type="radio" id="paypal" name="radio-group">
-                                            <label for="paypal">Pay now</label>
+                                            <input type="radio" id="paynow" name="payment_method">
+                                            <label for="paynow">Pay now</label>
                                         </p>
                                         <div class="bank-images mb-50">
                                             <img src="upload/aba.jpg" alt="Bank 1 Logo" width="300" height="400" style="margin-left:30px; margin-right: 60px;">
-                                            <img src="upload/prince.jpg" alt="Bank 1 Logo" width="300" height="400">
+                                            <img src="upload/prince.jpg" alt="Bank 2 Logo" width="300" height="400">
                                         </div>
                                     </div>
 
-                                    <a href="#" class="btn" style="color: #007bff">
-                                        <b>Book Now</b>
-                                    </a>
+                                    <button type="submit" class="btn" style="color: #007bff"><b>Book Now</b></button>
                                 </div>
                             </div>
                         </div>
@@ -136,9 +136,9 @@
                                         </tr>
                                     </table>
 
-                              </div>
+                            </div>
                         </div>
-                  </section>
+                </section>
 
                 </div>
 
