@@ -80,7 +80,7 @@ class RoomController extends Controller
             if(!empty($files)){
                 foreach($files as $file){
                     $imgName = date('YmdHi').$file->getClientOriginalName();
-                    $file->move('upload/room_img', $imgName);
+                    $file->move('upload/room_img/multi_img/', $imgName);
                     $subimage['multi_img'] = $imgName;
 
                     $subimage = new MultiImage();

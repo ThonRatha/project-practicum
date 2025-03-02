@@ -5,8 +5,8 @@
 <div class="banner-area" style="height: 480px;">
     <div class="container">
         <div class="banner-content">
-            <h1>Enjoy your vocation with Us!</h1>
-            <p> Booking room to stay and we'll show you who with!</p>
+            {{-- <h1>Enjoy your vocation with Us!</h1>
+            <p> Booking room to stay and we'll show you who with!</p> --}}
         </div>
     </div>
 </div>
@@ -25,7 +25,6 @@
                                 <input autocomplete="off" type="text" required name="check_in" class="form-control dt_picker" placeholder="yyy-mm-dd">
                                 <span class="input-group-addon"></span>
                             </div>
-                            {{-- <i class="fa-solid fa-calendar-days"></i> --}}
                         </div>
                     </div>
 
@@ -36,7 +35,6 @@
                                 <input autocomplete="off" type="text" required name="check_out" class="form-control dt_picker" placeholder="yyy-mm-dd">
                                 <span class="input-group-addon"></span>
                             </div>
-                            {{-- <i class="fa-solid fa-calendar-days"></i> --}}
                         </div>
                     </div>
 
@@ -69,8 +67,6 @@
 <!-- Room Area -->
 @include('frontend.home.room_area')
 <!-- Room Area End -->
-
-
 
 <!-- Book Area Two-->
 @include('frontend.home.room_area_two')

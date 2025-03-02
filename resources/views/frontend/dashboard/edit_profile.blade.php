@@ -2,7 +2,7 @@
 @section('main')
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <!-- Inner Banner -->
-<div class="inner-banner inner-bg6">
+{{-- <div class="inner-banner inner-bg6">
     <div class="container">
         <div class="inner-title">
             <ul>
@@ -15,7 +15,7 @@
             <h3>User Dashboard</h3>
         </div>
     </div>
-</div>
+</div> --}}
 <!-- Inner Banner End -->
 
 <!-- Service Details Area -->
@@ -27,7 +27,7 @@
             </div>
             <div class="col-lg-9">
                 <div class="service-article">
-                    <section class="checkout-area pb-70">
+                    <section class="checkout-area">
                     <div class="container">
                         <form action="{{ route('profile.store') }}" method="POST" enctype="multipart/form-data">
                             @csrf
@@ -65,21 +65,20 @@
                                                     <input type="text" name="phone" class="form-control" value="{{ $profileData->phone }}">
                                                 </div>
                                             </div>
-                                            <div class="col-lg-12 col-md-6">
+                                            <div class="col-lg-6 col-md-6 mb-0">
                                                 <div class="form-group">
-                                                    <label>User Profile  <span class="required">*</span></label>
+                                                    <label>Upload Profile Picture <span class="required">*</span></label>
                                                     <input type="file" name="photo" class="form-control" id="photo">
                                                 </div>
                                             </div>
-                                            <div class="col-lg-12 col-md-6">
+                                            <div class="col-lg-12 col-md-6 mb-0">
                                                 <div class="form-group">
                                                     <label><span class="required"></span></label>
-                                                    <img id="showImage" src="{{ (!empty($profileData->photo)) ? url('upload/user_images/'.$profileData->photo) : url('upload/no_image.jpg') }}" alt="User" class="rounded-circle p-1 bg-primary" width="80">
+                                                    <img id="showImage" src="{{ (!empty($profileData->photo)) ? url('upload/user_images/'.$profileData->photo) : url('upload/no_image.jpg') }}" alt="User"  style="width: 80px; height:110px;">
                                                 </div>
                                             </div>
-
-                                            <button type="submit" class="btn btn-danger">Save Changes </button>
                                         </div>
+                                        <button type="submit" class="btn" style="border: 2px solid #1e75d6; width:10%;">SAVE</button>
                                     </div>
                                 </div>
                             </div>

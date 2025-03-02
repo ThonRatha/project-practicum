@@ -19,18 +19,18 @@
         <!-- Inner Banner End --> --}}
 
         <!-- Room Area -->
-        <div class="room-area pt-100 pb-70">
+        <div class="room-area pt-10 pb-70">
             <div class="container">
                 <div class="section-title text-center">
                     <span class="sp-color">ROOMS</span>
                     <h2>Rooms and Rates</h2>
                 </div>
-                <div class="row pt-45">
+                <div class="row pt-10">
                     @foreach ($rooms as $item)
                     <div class="col-lg-4 col-md-6">
                         <div class="room-card">
                             <a href="{{ url('room/details/'.$item->id) }}">
-                                <img src="{{ asset('upload/room_img/'.$item->image) }}" alt="Images" style="width: 500px; height:500px;">
+                                <img src="{{ asset('upload/room_img/'.$item->image) }}" alt="Images" >
                             </a>
                             <div class="content">
                                 <h3>
@@ -44,13 +44,14 @@
                                     <li class="text_color" style="color: #000000;">${{ $item->price }}</li>
                                     <li class="text_color" style="color: #000000;">Per Night</li>
                                 </ul>
-                                <div class="rating text-color">
-                                    <i class="fa-solid fa-star" style="color: #FDCC0D;"></i>
-                                    <i class="fa-solid fa-star" style="color: #FDCC0D;"></i>
-                                    <i class="fa-solid fa-star" style="color: #FDCC0D;"></i>
-                                    <i class="fa-solid fa-star" style="color: #FDCC0D;"></i>
-                                    <i class="fa-solid fa-star" style="color: #FDCC0D;"></i>
-                                </div>
+                                <div class="rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <a href="{{ url('room/details/'.$item->id) }}">View Details</a>
                             </div>
                         </div>
                     </div>

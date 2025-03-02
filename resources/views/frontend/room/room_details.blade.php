@@ -1,6 +1,6 @@
 @extends('frontend.main_master')
 @section('main')
-        <div class="room-details-area pt-100 pb-70">
+        <div class="room-details-area pb-70">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4">
@@ -13,7 +13,7 @@
                                             <div class="form-group">
                                                 <label>CHECK IN</label>
                                                 <div class="input-group">
-                                                    <input id="datetimepicker" type="text" class="form-control" placeholder="01/25/2025">
+                                                    <input id="datetimepicker" type="text" class="form-control" placeholder="DD/MM/YY">
                                                     <span class="input-group-addon"></span>
                                                 </div>
                                                 <i class="sp-color fa-solid fa-calendar-days"></i>
@@ -24,7 +24,7 @@
                                             <div class="form-group">
                                                 <label>CHECK OUT</label>
                                                 <div class="input-group">
-                                                    <input id="datetimepicker-check" type="text" class="form-control" placeholder="01/31/2025">
+                                                    <input id="datetimepicker-check" type="text" class="form-control" placeholder="DD/MM/YY">
                                                     <span class="input-group-addon"></span>
                                                 </div>
                                                 <i class="sp-color fa-solid fa-calendar-days"></i>
@@ -33,7 +33,7 @@
 
                                         <div class="col-lg-12">
                                             <div class="form-group">
-                                                <label>Numbers of Persons</label>
+                                                <label>ADULT</label>
                                                 <select class="form-control">
                                                     <option>01</option>
                                                     <option>02</option>
@@ -45,8 +45,9 @@
 
                                         <div class="col-lg-12">
                                             <div class="form-group">
-                                                <label>Numbers of Rooms</label>
+                                                <label>CHILDREN</label>
                                                 <select class="form-control">
+                                                    <option>NO</option>
                                                     <option>01</option>
                                                     <option>02</option>
                                                     <option>03</option>
@@ -71,7 +72,7 @@
                             <div class="room-details-slider owl-carousel owl-theme">
                                 @foreach ($multiImage as $image)
                                 <div class="room-details-item">
-                                    <img src="{{ asset('upload/room_img/'.$image->multi_img) }}" alt="Images">
+                                    <img src="{{ asset('upload/room_img/multi_img/'.$image->multi_img) }}" alt="Images">
                                 </div>
                                 @endforeach
                             </div>
@@ -178,9 +179,46 @@
 
                 <div class="row ">
                     @foreach ($otherRooms as $item)
-                    <div class="col-lg-6">
+                    <div class="col-lg-4">
                         <div class="room-card-two">
-                            <div class="row align-items-center">
+                            <div class="room-card-img">
+                                <a href="{{ url('room/details/'.$item->id) }}">
+                                    <img src="{{ asset( 'upload/room_img/'.$item->image ) }}" alt="Images">
+                                </a>
+                            </div>
+
+                            <div class="room-card-content">
+                                <h3>
+                                    @if (isset($item) && isset($item['type']))
+                                    <a href="{{ url('room/details/'.$item->id) }}">{{ $item['type']['name'] }}</a>
+                                    @else
+                                    <p>Unavailable.</p>
+                                    @endif
+                                </h3>
+                                <span>{{ $item->price }}  / Per Night </span>
+                                <div class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                </div>
+                                <p>{{ $item->short_desc }}</p>
+                                <ul>
+                                    <li><i class="fa-solid fa-user"></i> {{ $item->room_capacity }} Person</li>
+                                    <li><i class="fa-solid fa-up-right-and-down-left-from-center"></i> {{ $item->size }}sqm</li>
+                                </ul>
+
+                                <ul>
+                                    <li><i class="fa-solid fa-image"></i> {{ $item->view }}</li>
+                                    <li><i class="fa-solid fa-bed"></i> {{ $item->bed_style }}</li>
+                                </ul>
+
+                                <a href="room-details.html" class="btn px-3" style="border: 2px solid #1e75d6;">
+                                    Book Now
+                                </a>
+                            </div>
+                            {{-- <div class="row align-items-center">
                                 <div class="col-lg-5 col-md-4 p-0">
                                     <div class="room-card-img">
                                         <a href="{{ url('room/details/'.$item->id) }}">
@@ -222,7 +260,7 @@
                                         </a>
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                     @endforeach

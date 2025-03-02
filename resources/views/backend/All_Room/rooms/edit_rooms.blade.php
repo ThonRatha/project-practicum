@@ -89,8 +89,7 @@
                                                     <label for="input3" class="form-label">Main Image</label>
                                                     <input type="file" name="image" class="form-control" id="image">
                                                     <img id="showImage" src="{{ (!empty($editData->image)) ? url('upload/room_img/'.$editData->image) :
-                                                    url('upload/no_image.jpg') }}" alt="Admin"
-                                                        class="bg-primary" width="80" height="70">
+                                                    url('upload/no_image.jpg') }}" alt="Admin" class="bg-primary" width="80"  height="70">
                                                 </div>
 
                                                 <div class="col-md-6">
@@ -98,9 +97,9 @@
                                                     <input type="file" name="multi_img[]" class="form-control" multiple id="multiImg" accept="image/jpeg, image/jpg, image/gif, image/png">
 
                                                     @foreach ($multiimgs as $item)
-                                                    <img src="{{ (!empty($item->multi_img)) ? url('upload/room_img/'.$item->multi_img) : url('upload/no_image.jpg') }}" alt="Admin"
-                                                    width="80" height="80" style="object-fit: cover; border-radius: 5px;>
-                                                    <a href="{{ route('multi.image.delete', $item->id) }}><i class="fa-regular fa-circle-xmark"></i></a>
+                                                    <img src="{{ (!empty($item->multi_img)) ? url('upload/room_img/multi_img/'.$item->multi_img) : url('upload/no_image.jpg') }}" alt="Admin"
+                                                    class="bg-primary" width="80" height="70">
+                                                    <a href="{{ route('multi.image.delete', $item->id) }}"><i class="fa-regular fa-circle-xmark"></i></a>
                                                     @endforeach
                                                     <div class="row" id="preview_img"></div>
                                                 </div>
@@ -140,29 +139,32 @@
                                                         </div>
 
                                                         @empty
-                                                            {{-- If empty data this part will be actually loaded--}}
-                                                            <div class="basic_facility_section_remove" id="basic_facility_section_remove">
-                                                                <div class="row add_item">
-                                                                    <div class="col-md-6">
-                                                                        <select name="facility_name[]" id="basic_facility_name" class="form-control">
-                                                                        <option value="">Select Facility</option>
-                                                                        <option value="Minibar" {{$item->facility_name == 'Complimentary Breakfast'?'selected':''}}> Minibar</option>
-                                                                        <option value="Work Desk"  {{$item->facility_name == 'Work Desk'?'selected':''}}>Work Desk</option>
-                                                                        <option value="Free Wi-Fi" {{$item->facility_name == 'Free Wi-Fi'?'selected':''}}>Free Wi-Fi</option>
-                                                                        <option value="Boat Transfer" {{ $item->facility_name == 'Boat Transfer' ? 'selected' : '' }}>Boat Transfer</option>
-                                                                        <option value="In Room Bathtub" {{ $item->facility_name == 'In Room Bathtub' ? 'selected' : '' }}>In Room Bathtub</option>
-                                                                        <option value="Free Breakfast" {{ $item->facility_name == 'Free Breakfast' ? 'selected' : '' }}>Free Breakfast</option>
-                                                                        <option value="Laundry and Dry Cleaning" {{$item->facility_name == 'Laundry and Dry Cleaning'?'selected':''}} >Laundry and Dry Cleaning</option>
-                                                                        </select>
-                                                                    </div>
-                                                                    <div class="col-md-6">
-                                                                        <div class="form-group" style="padding-top: 5px;">
-                                                                            <span class="btn addeventmore btn-outline-success radius-10" id="plus" style="margin-right: 16px;"><i class="fa-solid fa-plus"></i></span>
-                                                                            <span class="btn removeeventmore btn-outline-danger radius-10" id="minus"><i class="fa-solid fa-minus"></i></span>
-                                                                        </div>
-                                                                    </div>
+
+                                                        <div class="basic_facility_section_remove" id="basic_facility_section_remove">
+                                                            <div class="row add_item">
+                                                                <div class="col-md-6">
+                                                                    <select name="basic_facility_name[]" id="basic_facility_name" class="form-control">
+                                                                    <option value="">Select Facility</option>
+                                                                    <option value="Minibar">Minibar</option>
+                                                                    <option value="Work Desk" >Work Desk</option>
+                                                                    <option value="Free Wi-Fi">Free Wi-Fi</option>
+                                                                    <option value="Boat Transfer" >Boat Transfer</option>
+                                                                    <option value="In Room Bathtub" >In Room Bathtub</option>
+                                                                    <option value="Laundry and Dry Cleaning" >Laundry and Dry Cleaning</option>
+                                                                    </select>
                                                                 </div>
+                                                                <div class="form-group col-md-6" >
+                                                                    <span class="btn addeventmore btn-outline-success radius-10" id="plus" style="margin-right: 16px;"><i class="fa-solid fa-plus"></i></span>
+                                                                    <span class="btn removeeventmore btn-outline-danger radius-10" id="minus"><i class="fa-solid fa-minus"></i></span>
+                                                                </div>
+                                                                {{-- <div class="col-md-6">
+                                                                <div class="form-group" style="padding-top: 30px;">
+                                                                <a class="btn btn-success addeventmore"><i class="lni lni-circle-plus"></i></a>
+                                                                <span class="btn btn-danger removeeventmore"><i class="lni lni-circle-minus"></i></span>
+                                                                </div>
+                                                                </div> --}}
                                                             </div>
+                                                        </div>
                                                         @endforelse
                                                     </div>
                                                     </div>

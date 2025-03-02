@@ -69,6 +69,9 @@ img {
     padding-bottom: 100px;
 }
 
+.pt-10{
+    padding-top: 10px;
+}
 .pt-100 {
     padding-top: 100px;
 }
@@ -121,7 +124,7 @@ Default Btn Style
     display: inline-block;
     font-weight: 600;
     padding: 8px 8px;
-    color: #1e75d6;
+    color: #007bff;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -136,7 +139,7 @@ Default Btn Style
     left: 0%;
     width: 0;
     height: 50%;
-    background-color: #1e75d6;
+    background-color: #007bff;
     z-index: -1;
     -webkit-transition: all 0.7s;
     transition: all 0.7s;
@@ -150,7 +153,7 @@ Default Btn Style
     right: 0%;
     width: 0;
     height: 50%;
-    background-color: #1e75d6;
+    background-color: #007bff;
     z-index: -1;
     opacity: 0;
     -webkit-transition: all 0.8s;
@@ -185,8 +188,18 @@ Default Btn Style
     background-color: #1e75d6;
 }
 
-.btn-bg-login {
-    background-color: #6aa4fc;
+.btn-login {
+    display: inline-block;
+    width: 100%;
+    font-weight: 600;
+    padding: 8px 8px;
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border: #007bff;
+    border-radius: 10px;
+    background-color: #4d90fc;
 }
 
 /*================================
@@ -2314,7 +2327,6 @@ Services Area
     font-size: 16px;
     font-weight: 600;
     background-color: #FEF7F6;
-    border: 1px solid #007bff;
 }
 
 .services-bar-widget .side-bar-categories ul li:hover {
@@ -2753,6 +2765,12 @@ Room Area
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
+.room-card img{
+    width: 100%;
+    height: 350px;
+}
+
+
 .room-card:hover {
     -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
@@ -2775,12 +2793,13 @@ Room Area
 
 .room-card .content {
     padding: 20px;
+    margin-top: 10px;
     position: relative;
 }
 
-.room-card .content h3 {
+/* .room-card .content h3 {
     margin-bottom: 10px;
-}
+} */
 
 .room-card .content h3 a {
     display: block;
@@ -2824,12 +2843,15 @@ Room Area
 
 .room-card .content .rating {
     position: absolute;
-    top: 24px;
+    top: 55px;
     right: 20px;
     font-size: 16px;
     color: #FDCC0D;
     display: inline-block;
 }
+
+
+
 
 .room-area-two {
     margin-bottom: 20px;
@@ -2991,7 +3013,7 @@ Room Area
 }
 
 .room-card-two .room-card-img a img {
-  border-radius: 15px;
+  border-radius: 10px;
 }
 
 .room-card-two .room-card-content {
@@ -3000,7 +3022,7 @@ Room Area
 }
 
 .room-card-two .room-card-content h3 {
-    margin-top: 0;
+    margin-top: 20px;
     font-size: 24px;
     margin-bottom: 10px;
     font-weight: 700;
@@ -3020,7 +3042,7 @@ Room Area
     color: #FDCC0D;
     display: inline-block;
     position: absolute;
-    top: 44px;
+    top: 56px;
     right: 30px;
 }
 
@@ -3039,7 +3061,7 @@ Room Area
     display: inline-block;
     color: #292323;
     font-size: 15px;
-    margin-right: 15px;
+    margin-right: 95px;
     margin-bottom: 10px;
 }
 
@@ -3059,20 +3081,76 @@ Room Area
     margin-top: 5px;
     margin-bottom: 5px;
     padding: 6px 18px;
-    color: #4d90fc;
+    color: #fff;
 }
-.room-card-two .room-card-content .book-more-btn {
-    margin: 5px auto; /* Centers the button horizontally with auto margins */
+/* .room-card-two .room-card-content .book-more-btn {
+    margin: 5px auto;
     padding: 6px 18px;
     color: #4d90fc;
-    display: inline-block; /* Ensures the button behaves like a block-level element */
-    border-radius: 10px; /* Optional: Rounded corners for the button */
-    text-decoration: none; /* Removes underline for the link */
-}
+    display: inline-block;
+    border-radius: 10px;
+    text-decoration: none;
+} */
 
-.room-card-two .room-card-content .book-more-btn:hover {
+/* .room-card-two .room-card-content .book-more-btn:hover {
     background-color: #1e75d6;
     color: #ffffff;
+} */
+
+.room-card-two {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.room-card-img {
+    width: 100%;
+}
+
+.room-card-img img {
+    width: 400px;
+    height: 250px;
+    display: block;
+}
+
+.room-card-content {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.room-card-footer i {
+    margin-right: 5px;
+    color: #555;
+}
+/*
+.room-card-footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.room-card-footer ul li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+} */
+
+.book-more-btn {
+    margin-top: 15px;
+    text-align: center;
+    padding: 10px;
+    background-color: #1e75d6;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
 }
 
 .side-bar-form {
@@ -3957,76 +4035,76 @@ Contact Area
 }
 
 .contact-form .form-group.checkbox-option p {
-  padding-left: 25px;
-  font-size: 15px;
+    padding-left: 25px;
+    font-size: 15px;
 }
 
 .contact-form .form-group.checkbox-option p a {
-  color: #EE786C;
+    color: #007bff;
 }
 
 .contact-form .form-group.checkbox-option p a:hover {
-  color: #C890FF;
+    color: #09e209;
 }
 
 .contact-form .form-group .form-control {
-  height: 50px;
-  color: #292323;
-  border: 1px solid #ebebeb;
-  background-color: #ffffff;
-  font-size: 14px;
-  padding: 10px 20px;
-  width: 100%;
-  font-weight: 500;
+    height: 50px;
+    color: #292323;
+    border: 1px solid #ebebeb;
+    background-color: #ffffff;
+    font-size: 14px;
+    padding: 10px 20px;
+    width: 100%;
+    font-weight: 500;
 }
 
 .contact-form .form-group .form-control:focus {
-  outline: none;
-  border-color: #292323;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+    outline: none;
+    border-color: #007bff;
+    -webkit-box-shadow: none;
+            box-shadow: none;
 }
 
 .contact-form .form-group textarea.form-control {
-  height: auto;
+    height: auto;
 }
 
 .contact-form .with-errors {
-  float: left;
-  font-size: 14px;
-  margin-top: 10px;
-  margin-bottom: 0;
-  color: #f00;
-  font-weight: 400;
-  display: block;
+    float: left;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    color: #f00;
+    font-weight: 400;
+    display: block;
 }
 
 .contact-form .text-danger {
-  font-size: 18px;
-  margin-top: 15px;
+    font-size: 18px;
+    margin-top: 15px;
 }
 
 .contact-form .default-btn {
-  border: 0;
-  outline: none;
-  padding: 14px 60px;
-  width: 100%;
+    border: 0;
+    outline: none;
+    padding: 14px 60px;
+    width: 100%;
 }
 
 .contact-form .form-group .form-control::-webkit-input-placeholder {
-  color: #292323;
+    color: #cccdc6;
 }
 
 .contact-form .form-group .form-control:-ms-input-placeholder {
-  color: #292323;
+    color: #cccdc6;
 }
 
 .contact-form .form-group .form-control::-ms-input-placeholder {
-  color: #292323;
+    color: #cccdc6;
 }
 
 .contact-form .form-group .form-control::placeholder {
-  color: #292323;
+    color: #cccdc6;
 }
 
 .contact-another-content .section-title {
@@ -4135,6 +4213,9 @@ User All Form
     border-radius: 15px;
 }
 
+.user-all-form .contact-form h2{
+    color: #007bff;
+}
 .user-all-form .contact-form .section-title {
     margin-bottom: 30px;
     font-size: 30px;
@@ -4635,6 +4716,7 @@ Booking Area End
 /*=================================
 Checkout Area
 ===================================*/
+
 .billing-details {
     margin-bottom: 30px;
     background-color: #ffffff;
@@ -4654,11 +4736,11 @@ Checkout Area
 }
 
 .billing-details .title{
-    text-align: center;
+    text-align: left;
 }
 
 .billing-details .form-group {
-    margin-bottom: 25px;
+    margin-bottom: 10px;
 }
 
 .billing-details .form-group label {

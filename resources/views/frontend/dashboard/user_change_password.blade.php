@@ -2,7 +2,7 @@
 @section('main')
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <!-- Inner Banner -->
-<div class="inner-banner inner-bg6">
+{{-- <div class="inner-banner inner-bg6">
     <div class="container">
         <div class="inner-title">
             <ul>
@@ -15,7 +15,7 @@
             <h3>User Dashboard</h3>
         </div>
     </div>
-</div>
+</div> --}}
 <!-- Inner Banner End -->
 
 <!-- Service Details Area -->
@@ -68,8 +68,10 @@
                                             </div>
 
 
-                                            <button type="submit" class="btn btn-danger">Save Changes </button>
+                                            {{-- <button type="submit" class="btn btn-danger">Save Changes </button> --}}
+
                                         </div>
+                                        <button type="submit" class="btn" style="border: 2px solid #1e75d6; width:10%;">SAVE</button>
                                     </div>
                                 </div>
                             </div>

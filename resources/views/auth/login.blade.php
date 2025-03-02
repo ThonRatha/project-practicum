@@ -28,29 +28,27 @@
                 </div>
 
                 <!-- Right Side: Image -->
-
                 <div class="col-lg-6 col-xl-6">
                     <div class="user-all-form">
                         <div class="contact-form">
                             <div class="section-title text-center">
-                                <span class="sp-color">Welcome!</span>
-                                <h2>Sign In to Your Account!</h2>
+                                {{-- <span class="sp-color">Welcome!</span> --}}
+                                <h2>SIGN IN</h2>
                             </div>
-
                             <form method="POST" action="{{ route('login') }}" >
                                 @csrf
                                 <div class="row">
                                     <div class="col-12">
+                                        <div class="p mb-0">Email</div>
                                         <div class="form-group">
-                                            <input type="text" name="login" id="login" class="form-control" required data-error="Please enter your Username or Email" placeholder="Email or Phone">
+                                            <input type="text" name="login" id="login" class="form-control" required data-error="Please enter your Email" placeholder="email">
                                         </div>
                                     </div>
                                     <div class="col-12">
+                                        <div class="p mb-0">Password</div>
                                         <div class="form-group" >
-                                            <input class="form-control" id="password" type="password" name="password" placeholder="Password">
-
+                                            <input class="form-control" id="password" type="password" name="password" placeholder="password">
                                         </div>
-
                                     </div>
                                     <div class="col-lg-6 col-sm-6 form-condition">
                                         <div class="agree-label">
@@ -59,15 +57,15 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-sm-6 text-end">
-                                        <a class="forget" href="{{ route('password.request') }}">Forgot Password?</a>
+                                        <a class="forget" href="{{ route('password.request') }}">Forgot your password?</a>
                                     </div>
                                     <div class="col-lg-12 col-md-12 text-center">
-                                            <button type="submit" class=" large-p default-btn btn-bg-login border-radius-5">Sign In Now</button>
+                                            <button type="submit" class="btn-login">Sign In</button>
                                     </div>
                                     <div class="col-12">
                                         <div class="text-center">
                                             <div class="account-desc">
-                                                <p class="{{ route('register') }}">Don't have an account? <a href="sign-up.html">Sign Up</a></p>
+                                                <p class="a">Don't have an account? <a href="{{ route('register') }}">Sign Up</a></p>
                                             </p>
                                             </div>
                                         </div>
@@ -77,7 +75,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>

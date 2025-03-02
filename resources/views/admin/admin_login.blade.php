@@ -6,7 +6,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!--favicon-->
-	<link rel="icon" href="{{ asset('frontend/assets/img/fav_icon.png') }}" type="image/png" />
+	{{-- <link rel="icon" href="{{ asset('frontend/assets/img/fav_icon.png') }}" type="image/png" /> --}}
 
 	<link href="{{ asset('backend/assets/css/bootstrap.min.css') }}" rel="stylesheet">
 	<link href="{{ asset('backend/assets/css/bootstrap-extended.css') }}" rel="stylesheet">
@@ -31,13 +31,13 @@
         <div class="col-lg-5 col-xl-5">
 
                 <div class="card-body p-sm-5">
-                    <div class="">
+                    <div class="body">
                         <div class="mb-0 text-center mt-5">
                             <img src="{{ asset('frontend/assets/img/logos/logo.png') }}" width="250" alt="">
                         </div>
                         <div class="text-center mt-2">
                             <h3 class="sp-color">Welcome Admin!</h3>
-                            <p class="mt-2">Please log into your account!</p>
+                            {{-- <p class="mt-2">Please log into your account!</p> --}}
                         </div>
                         <div class="form-body">
 

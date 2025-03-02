@@ -17,10 +17,10 @@
                             <i class="fa-solid fa-location-dot"></i>
                             <a href="#">Phnom Penh</a>
                         </li>
-                        <li>
+                        {{-- <li>
                             <i class="fa-solid fa-phone"></i>
                             <a href="#">+885 123456789</a>
-                        </li>
+                        </li> --}}
 
                         @auth
                         <li>
