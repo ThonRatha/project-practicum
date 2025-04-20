@@ -3602,436 +3602,429 @@ Testimonials Area
 }
 
 .testimonials-img {
-  position: relative;
-  margin-left: 50px;
-  margin-bottom: 30px;
+    position: relative;
+    margin-left: 50px;
+    margin-bottom: 30px;
 }
 
 .testimonials-img img {
-  border-radius: 15px;
+    border-radius: 15px;
 }
 
 .testimonials-img .content {
-  position: absolute;
-  bottom: 60px;
-  left: -50px;
-  background-color: #ffffff;
-  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  padding: 20px 50px;
-  border-radius: 15px;
+    position: absolute;
+    bottom: 60px;
+    left: -50px;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 20px 50px;
+    border-radius: 15px;
 }
 
 .testimonials-img .content h3 {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 .testimonials-img .content span {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 .testimonials-area-two {
-  margin-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 .testimonials-area-two .section-title h2 {
-  max-width: 650px;
-  margin: 0 auto;
+    max-width: 650px;
+    margin: 0 auto;
 }
 
 .testimonials-area-two .owl-dots {
-  margin-top: 0px !important;
-  margin-bottom: 0 !important;
+    margin-top: 0px !important;
+    margin-bottom: 0 !important;
 }
 
 .testimonials-area-two .owl-dots .owl-dot span {
-  background-color: #c890ff54 !important;
-  -webkit-transition: 0.7s;
-  transition: 0.7s;
-  margin: 0 7px;
-  width: 14px !important;
-  height: 14px !important;
+    background-color: #c890ff54 !important;
+    -webkit-transition: 0.7s;
+    transition: 0.7s;
+    margin: 0 7px;
+    width: 14px !important;
+    height: 14px !important;
 }
 
 .testimonials-area-two .owl-dots .owl-dot.active span {
-  background-color: #C890FF !important;
+    background-color: #007bff !important;
 }
 
 .testimonials-area-two .owl-dots .owl-dot:hover span {
-  background-color: #C890FF !important;
+    background-color: #007bff !important;
 }
 
 .testimonials-content {
-  background-color: #FEF7F6;
-  padding: 70px 40px;
-  position: relative;
-  left: -100px;
-  border-radius: 20px;
-  margin-bottom: 30px;
+    background-color: #FEF7F6;
+    padding: 70px 40px;
+    position: relative;
+    left: -100px;
+    border-radius: 20px;
+    margin-bottom: 30px;
 }
 
 .testimonials-content::before {
-  content: '\f10c';
-  position: absolute;
-  font-family: Flaticon;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  right: 0;
-  font-size: 250px;
-  color: #C890FF;
-  margin: 0 auto;
-  text-align: center;
-  opacity: 0.08;
+    content: '\f10c';
+    position: absolute;
+    font-family: Flaticon;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    font-size: 250px;
+    color: #007bff;
+    margin: 0 auto;
+    text-align: center;
+    opacity: 0.08;
 }
 
 .testimonials-content i {
-  font-size: 50px;
-  color: #C890FF;
-  line-height: 1;
+    font-size: 50px;
+    color: #007bff;
+    line-height: 1;
 }
 
 .testimonials-content p {
-  padding-top: 10px;
-  margin-bottom: 10px;
+    padding-top: 10px;
+    margin-bottom: 10px;
 }
 
 .testimonials-content span {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 .testimonials-img-two {
-  position: relative;
-  z-index: 1;
-  margin-left: 30px;
-  margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+    margin-left: 30px;
+    margin-bottom: 30px;
 }
 
 .testimonials-img-two::before {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  top: 30px;
-  left: -30px;
-  width: 70%;
-  height: 90%;
-  background-color: #FFF8E6;
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 30px;
+    left: -30px;
+    width: 100%;
+    height: 100%;
+    background-color: #eaa11b;
 }
 
 .testimonials-area-another {
-  margin-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 .testimonials-area-another .section-title h2 {
-  max-width: 600px;
-  margin: 0 auto;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .testimonials-area-another .owl-dots {
-  margin-top: 0px !important;
-  margin-bottom: 0 !important;
+    margin-top: 0px !important;
+    margin-bottom: 0 !important;
 }
 
 .testimonials-area-another .owl-dots .owl-dot span {
-  background-color: #ee786c96 !important;
-  -webkit-transition: 0.7s;
-  transition: 0.7s;
-  margin: 0 7px;
-  width: 12px !important;
-  height: 12px !important;
+    background-color: #007bff !important;
+    -webkit-transition: 0.7s;
+    transition: 0.7s;
+    margin: 0 7px;
+    width: 12px !important;
+    height: 12px !important;
 }
 
 .testimonials-area-another .owl-dots .owl-dot.active span {
-  background-color: #EE786C !important;
+    background-color: #007bff !important;
 }
 
 .testimonials-area-another .owl-dots .owl-dot:hover span {
-  background-color: #EE786C !important;
+    background-color: #007bff !important;
 }
 
 .testimonials-area-three {
-  margin-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 .testimonials-area-three .section-title h2 {
-  max-width: 600px;
-  margin: 0 auto;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .testimonials-slider-area .owl-dots {
-  margin-top: 0px !important;
-  margin-bottom: 0 !important;
+    margin-top: 0px !important;
+    margin-bottom: 0 !important;
 }
 
 .testimonials-slider-area .owl-dots .owl-dot span {
-  background-color: #ee786c87 !important;
-  -webkit-transition: 0.7s;
-  transition: 0.7s;
-  margin: 0 7px;
+    background-color: #007bff !important;
+    -webkit-transition: 0.7s;
+    transition: 0.7s;
+    margin: 0 7px;
 }
 
 .testimonials-slider-area .owl-dots .owl-dot.active span {
-  background-color: #EE786C !important;
+    background-color: #007bff !important;
 }
 
 .testimonials-slider-area .owl-dots .owl-dot:hover span {
-  background-color: #EE786C !important;
+    background-color: #007bff !important;
 }
 
 .testimonials-slider-content {
-  margin-bottom: 30px;
-  margin-left: 30px;
+    margin-bottom: 30px;
+    margin-left: 30px;
 }
 
 .testimonials-slider-content i {
-  color: #EE786C;
-  font-size: 40px;
-  line-height: 1.6;
-  margin-bottom: 20px;
+    color: #007bff;
+    font-size: 40px;
+    line-height: 1.6;
+    margin-bottom: 20px;
 }
 
 .testimonials-slider-content p {
-  margin-bottom: 15px;
+    margin-bottom: 15px;
 }
 
 .testimonials-slider-content ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .testimonials-slider-content ul li {
-  display: inline-block;
-  padding-left: 70px;
-  position: relative;
+    display: inline-block;
+    padding-left: 70px;
+    position: relative;
 }
 
 .testimonials-slider-content ul li img {
-  position: absolute;
-  left: 0;
-  top: 0;
-  border-radius: 50%;
-  width: unset !important;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+    width: unset !important;
 }
 
 .testimonials-slider-content ul li h3 {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 .testimonials-slider-content ul li span {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 
-/*=================================
-Testimonials Area End
-====================================*/
-/*=================================
-Faq Area
-====================================*/
+/* Testimonials Area End */
+
+/*Faq Area */
+
 .faq-img {
-  margin-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 .faq-img img {
-  border-radius: 50px;
+    border-radius: 50px;
 }
 
 .faq-content {
-  max-width: 540px;
-  margin-right: auto;
-  margin-bottom: 30px;
+    max-width: 540px;
+    margin-right: auto;
+    margin-bottom: 30px;
 }
 
 .faq-content .section-title {
-  margin-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 .faq-content .faq-accordion .accordion {
-  list-style-type: none;
-  padding-left: 0;
-  margin-bottom: 0;
-  border: none;
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    border: none;
 }
 
 .faq-content .faq-accordion .accordion .accordion-item {
-  display: block;
-  margin-bottom: 15px;
-  border: 1px solid #B56952;
+    display: block;
+    margin-bottom: 15px;
+    border: 1px solid #007bff;
 }
 
 .faq-content .faq-accordion .accordion .accordion-item:last-child {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 .faq-content .faq-accordion .accordion .accordion-title {
-  padding: 10px 60px 10px 20px;
-  color: #292323;
-  text-decoration: none;
-  position: relative;
-  display: block;
-  font-family: "Noto Serif", serif;
-  font-size: 18px;
-  font-weight: 600;
+    padding: 10px 60px 10px 20px;
+    color: #292323;
+    text-decoration: none;
+    position: relative;
+    display: block;
+    font-family: "Open Sans", serif;
+    font-size: 18px;
+    font-weight: 600;
 }
 
 .faq-content .faq-accordion .accordion .accordion-title i {
-  position: absolute;
-  right: 15px;
-  top: 11px;
-  font-size: 25px;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  font-size: 24px;
-  width: 30px;
-  height: 30px;
-  color: #B56952;
-  text-align: center;
-  line-height: 30px;
-  background-color: transparent;
-}
-
-.faq-content .faq-accordion .accordion .accordion-title.active i::before {
-  content: "\eb8b";
+    position: absolute;
+    right: 15px;
+    top: 11px;
+    font-size: 25px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    font-size: 24px;
+    width: 30px;
+    height: 30px;
+    color: #007bff;
+    text-align: center;
+    line-height: 30px;
+    background-color: transparent;
 }
 
 .faq-content .faq-accordion .accordion .accordion-title.active i .accordion-content p {
-  margin-top: -5px;
+    margin-top: -5px;
 }
 
 .faq-content .faq-accordion .accordion .accordion-content {
-  display: none;
-  position: relative;
-  margin-top: 0;
-  padding-bottom: 10px;
-  padding-right: 20px;
-  padding-left: 20px;
+    display: none;
+    position: relative;
+    margin-top: 0;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
 }
 
 .faq-content .faq-accordion .accordion .accordion-content p {
-  margin-top: -6px;
-  line-height: 1.8;
-  font-size: 15px;
-  margin-bottom: 3px;
+    margin-top: -6px;
+    line-height: 1.8;
+    font-size: 15px;
+    margin-bottom: 3px;
 }
 
 .faq-content .faq-accordion .accordion .accordion-content.show {
-  display: block;
+    display: block;
 }
 
 .faq-content-bg .faq-accordion .accordion .accordion-item {
-  border: none !important;
-  background-color: #ffffff;
-  border-radius: 10px;
+    border: none !important;
+    background-color: #ffffff;
+    border-radius: 10px;
 }
 
 .faq-content-bg .faq-accordion .accordion .accordion-title i {
-  color: #292323;
+    color: #292323;
 }
 
-.faq-content-bg .faq-accordion .accordion .accordion-title.active i::before {
-  content: "\ea57";
-}
 
 .faq-content-bg2 .faq-accordion .accordion .accordion-item {
-  border: none !important;
-  background-color: #ffffff;
+    border: none !important;
+    background-color: #ffffff;
 }
 
 .faq-content-bg2 .faq-accordion .accordion .accordion-item .accordion-title i {
-  color: #292323;
+    color: #292323;
 }
 
 .faq-img-2 {
-  margin-bottom: 30px;
-  margin-left: 30px;
+    margin-bottom: 30px;
+    margin-left: 30px;
 }
 
 .faq-img-2 img {
-  border-radius: 0 50px 0 50px;
+    border-radius: 0 50px 0 50px;
 }
 
 .faq-img-3 {
-  margin-bottom: 60px;
-  margin-left: 30px;
-  position: relative;
-  z-index: 1;
+    margin-bottom: 60px;
+    margin-left: 30px;
+    position: relative;
+    z-index: 1;
 }
 
 .faq-img-3::before {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  top: -30px;
-  width: 80%;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-  height: 112%;
-  background-color: #ffffff;
-  text-align: center;
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: -30px;
+    width: 80%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    height: 112%;
+    background-color: #ffffff;
+    text-align: center;
 }
 
 .faq-form .contact-form .section-title {
-  margin-bottom: 30px;
+    margin-bottom: 30px;
 }
 
-/*=================================
-Faq Area End
-====================================*/
-/*=================================
-Contact Area
-====================================*/
+/* Faq Area End */
+
+/* Contact Area */
+.contact-content {
+    margin-top: -80px;
+}
 .contact-content .section-title {
-  margin-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 .contact-content .contact-img {
-  margin-bottom: 30px;
-  position: relative;
-  z-index: 1;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
 }
 
 .contact-content .contact-img img {
-  border-radius: 50px;
+    border-radius: 15px;
 }
 
 .contact-content .contact-img::before {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  top: 30px;
-  left: -30px;
-  width: 70%;
-  height: 87%;
-  background-color: #EE786C;
-  border-radius: 50px;
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 30px;
+    left: -30px;
+    width: 100%;
+    height: 100%;
+    background-color: #b0d4ff;
+    border-radius: 15px;
 }
 
 .contact-form {
-  padding: 50px 30px;
-  max-width: 800px;
-  position: relative;
-  z-index: 1;
-  margin-bottom: 30px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #F5F5F5;
+    padding: 50px 30px;
+    max-width: 800px;
+    position: relative;
+    z-index: 1;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    background-color: #F5F5F5;
 }
 
 .contact-form .form-group {
-  margin-bottom: 20px;
-  position: relative;
+    margin-bottom: 20px;
+    position: relative;
 }
 
 .contact-form .form-group.checkbox-option {
-  position: relative;
+    position: relative;
 }
 
 .contact-form .form-group.checkbox-option #chb2 {
-  position: absolute;
-  top: 6px;
-  left: 0;
+    position: absolute;
+    top: 6px;
+    left: 0;
 }
 
 .contact-form .form-group.checkbox-option p {
@@ -4108,74 +4101,86 @@ Contact Area
 }
 
 .contact-another-content .section-title {
-  margin-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 .contact-item {
-  margin-bottom: 30px;
-  background-color: #F5F5F5;
-  padding: 30px;
+    margin-bottom: 30px;
+    background-color: #F5F5F5;
+    padding: 30px;
+    border-radius: 15px;
 }
 
 .contact-item ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .contact-item ul li {
-  display: block;
-  position: relative;
-  padding-left: 85px;
-  margin-bottom: 20px;
+    display: block;
+    position: relative;
+    padding-left: 85px;
+    margin-bottom: 20px;
 }
 
 .contact-item ul li:last-child {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 .contact-item ul li i {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 70px;
-  height: 70px;
-  line-height: 70px;
-  background-color: #ffffff;
-  color: #EE786C;
-  font-size: 40px;
-  text-align: center;
-  border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 30px;
+    margin-top: 10px;
+    line-height: 25px;
+    color: #007bff;
+    font-size: 25px;
+    text-align: center;
 }
 
 .contact-item ul li .content {
-  padding-top: 7px;
-  padding-bottom: 7px;
+    padding-top: 7px;
+    padding-bottom: 7px;
 }
 
 .contact-item ul li .content span {
-  display: block;
-  color: #555555;
-  font-size: 17px;
-  font-weight: 600;
+    display: block;
+    color: #555555;
+    font-size: 17px;
+    font-weight: 600;
 }
 
 .contact-item ul li .content span a {
-  display: block;
-  color: #555555;
+    display: block;
+    color: #555555;
 }
 
 .contact-item ul li .content span a:hover {
-  color: #EE786C;
+    color: #007bff;
 }
 
 .contact-another-img {
-  margin-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 .contact-another-img img {
-  border-radius: 50px;
+    border-radius: 15px;
 }
+
+.contact-another-img::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 30px;
+    width: 48%;
+    height: 95%;
+    background-color: rgb(176, 212, 255);
+    right: -30px;
+    border-radius: 15px;
+}
+
 
 /*=================================
 Contact Area End

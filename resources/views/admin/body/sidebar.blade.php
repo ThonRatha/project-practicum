@@ -67,5 +67,17 @@
                 </li>
             </ul>
         </li>
+        <li>
+            <a class="has-arrow" href="javascript:;">
+                <div class="parent-icon"><i class="fa-solid fa-comments"></i>
+                </div>
+                <div class="menu-title">Contact Message </div>
+            </a>
+            <ul>
+                <li> <a href="{{ route('contact.message') }}"><i class="fa-solid fa-envelope-open"></i>All Message </a>
+                </li>
+            </ul>
+        </li>
+
     <!--end navigation-->
 </div>

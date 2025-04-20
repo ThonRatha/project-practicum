@@ -1,5 +1,5 @@
 @php
-    $room = App\Models\Room::latest()->limit(4)->get();
+    $room = App\Models\Room::latest()->limit(6)->get();
 @endphp
 <div class="room-area pt-100 pb-70 section-bg" style="background-color:#ffffff">
     <div class="container">
@@ -35,7 +35,7 @@
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star-half-stroke"></i>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, adipiscing elit. Suspendisse et faucibus felis, sed pulvinar purus.</p>
+                        <p>Your journey starts with a great stay!!!</p>
 
                         <!-- Icon text moved to the bottom -->
                         <div class="room-card-footer">
@@ -50,7 +50,10 @@
 
                         </div>
 
-                        <a href="room-details.html" class="book-more-btn" style="border: 2px solid #1e75d6;">
+                        {{-- <button type="submit" class="default-btn border-radius-5" style="border: 2px solid #1e75d6;">
+                            Book Now
+                        </button> --}}
+                        <a href="room-details.html" class="default-btn border-radius-5" style="border: 2px solid #1e75d6;">
                             Book Now
                         </a>
                     </div>

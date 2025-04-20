@@ -8,6 +8,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\Backend\TeamController;
 use App\Http\Controllers\Frontend\BookingController;
 use App\Http\Controllers\Frontend\FrontendRoomController;
+use App\Http\Controllers\GalleryController;
 use Illuminate\Support\Facades\Route;
 use Intervention\Image\Facades\Image;
 
@@ -112,5 +113,15 @@ Route::middleware(['auth'])->group(function(){
         Route::get('/checkout/', 'Checkout')->name('checkout');
         Route::post('/booking/store/', 'BookingStore')->name('user_booking_store');
         Route::post('/checkout/store/', 'CheckoutStore')->name('checkout.store');
+        Route::match(['get', 'post'],'/stripe_pay', [BookingController::class, 'stripe_pay'])->name('stripe_pay');
+
     });
+});
+
+Route::controller(GalleryController::class)->group(function(){
+
+    // Contact All Route
+    Route::get('/contact', 'ContactUs')->name('contact.us');
+    Route::post('/store/contact', 'StoreContact')->name('store.contact');
+    Route::get('/contact/message', 'AdminContactMessage')->name('contact.message');
 });

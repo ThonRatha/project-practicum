@@ -7,7 +7,7 @@
         <div class="row align-items-center pt-45">
             <div class="col-lg-6 col-md-6">
                 <div class="testimonials-img-two">
-                    <img src="{{ asset('frontend/assets/img/bb.jpg') }}" alt="Images">
+                    <img src="{{ asset('frontend/assets/img/b.jpg') }}" alt="Images">
                 </div>
             </div>
 

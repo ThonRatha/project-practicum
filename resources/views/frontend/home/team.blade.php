@@ -10,8 +10,6 @@
         </div>
         <div class="team-slider-two owl-carousel owl-theme pt-5">
             @foreach ($team as $item)
-
-
             <div class="team-item">
                 <a href="team.html">
                     <img src="{{ asset($item->image) }}" alt="Images">
@@ -29,7 +27,7 @@
                     </ul>
                 </div>
             </div>
+            @endforeach
         </div>
-        @endforeach
     </div>
 </div>

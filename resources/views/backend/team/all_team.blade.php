@@ -1,27 +1,10 @@
 @extends('admin.admin_dashboard')
 @section('admin')
 <div class="page-content">
-    {{-- <!--breadcrumb-->
-    <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
-
-        <div class="ps-3">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb mb-0 p-0">
-                    <a href="{{ route('add.team') }}">
-                        <button type="button" class="btn btn-outline-primary px-3 radius-10" style="margin-right: 16px;">Add</button>
-                        <button type="button" class="btn btn-outline-primary px-5 radius-10">Add Team</button>
-                    </a>
-                </ol>
-
-            </nav>
-        </div>
-
-    </div>
-    <!--end breadcrumb--> --}}
     <div class="one">
         <div style="display: flex; justify-content: space-between; align-items: center;">
             <h6 class="mb-0 px-3">All Team Members</h6>
-            <a href="{{ route('add.room.type') }}">
+            <a href="{{ route('add.team') }}">
                 <button type="button" class="btn btn-outline-primary px-3 radius-10" style="margin-right: 16px;">Add</button>
             </a>
         </div>

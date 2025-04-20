@@ -32,15 +32,8 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="contact.html" class="nav-link">
-                                COUPON
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
                             <a href="#" class="nav-link">
                                 SERVICE
-
                             </a>
                             <ul class="dropdown-menu">
                                 <li class="nav-item">
@@ -78,6 +71,16 @@
                                 </li>
                                 @endforeach
                             </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link">
+                                COUPON
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('contact.us') }}" class="nav-link">
+                                CONTACT
+                            </a>
                         </li>
                         <li class="nav-item-btn">
                             <a href="#" class="default-btn">Book Now</a>

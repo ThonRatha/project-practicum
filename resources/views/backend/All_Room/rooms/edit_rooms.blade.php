@@ -110,7 +110,7 @@
                                                 </div>
                                                 <div class="col-md-6">
                                                     <label for="input11" class="form-label">Description</label>
-                                                    <textarea name="short_desc" class="form-control" id="input11" rows="4">{{ $editData->short_desc }}</textarea>
+                                                    <textarea name="description" class="form-control" id="input11" rows="4">{{ $editData->description }}</textarea>
                                                 </div>
                                                 <div class="row pt-10 mt-10">
                                                         <div class="col-md-12 mb-10">
@@ -153,16 +153,10 @@
                                                                     <option value="Laundry and Dry Cleaning" >Laundry and Dry Cleaning</option>
                                                                     </select>
                                                                 </div>
-                                                                <div class="form-group col-md-6" >
-                                                                    <span class="btn addeventmore btn-outline-success radius-10" id="plus" style="margin-right: 16px;"><i class="fa-solid fa-plus"></i></span>
-                                                                    <span class="btn removeeventmore btn-outline-danger radius-10" id="minus"><i class="fa-solid fa-minus"></i></span>
+                                                                <div class="col-md-6" >
+                                                                    <a class="btn addeventmore btn-outline-success radius-10" id="plus" style="margin-right: 16px;"><i class="fa-solid fa-plus"></i></a>
+                                                                    <a class="btn removeeventmore btn-outline-danger radius-10" id="minus"><i class="fa-solid fa-minus"></i></a>
                                                                 </div>
-                                                                {{-- <div class="col-md-6">
-                                                                <div class="form-group" style="padding-top: 30px;">
-                                                                <a class="btn btn-success addeventmore"><i class="lni lni-circle-plus"></i></a>
-                                                                <span class="btn btn-danger removeeventmore"><i class="lni lni-circle-minus"></i></span>
-                                                                </div>
-                                                                </div> --}}
                                                             </div>
                                                         </div>
                                                         @endforelse
@@ -187,7 +181,6 @@
                         <div class="card">
                             <div class="card-body">
                                 <a class="card-title float-right mb-16px" onclick="addRoomNo()" id="addRoomNo">
-                                    {{-- <i class="fa-solid fa-plus"> Add New</i> --}}
                                     <button type="submit" class="btn btn-outline-primary" style="margin-top: 28px">Add New</button>
                                 </a>
                                 <div class="roomnoHide" id="roomnoHide">

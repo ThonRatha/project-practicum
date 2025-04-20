@@ -2,7 +2,7 @@
     <div class="container">
         <div class="footer-top pt-100 pb-70">
             <div class="row align-items-center">
-                <div class="col-lg-3 col-md-6">
+                {{-- <div class="col-lg-4 col-md-6">
                     <div class="footer-widget">
                         <div class="footer-logo">
                             <a href="index.html">
@@ -24,37 +24,8 @@
                             </li>
                         </ul>
                     </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-widget pl-5">
-                        <h3>DESTINATION</h3>
-                        <ul class="footer-list">
-                            <li>
-                                <a href="about.html" target="_blank">
-                                    Kampot
-                                </a>
-                            </li>
-                            <li>
-                                <a href="services-1.html" target="_blank">
-                                    Siem Reap
-                                </a>
-                            </li>
-                            <li>
-                                <a href="terms-condition.html" target="_blank">
-                                    Phnom Penh
-                                </a>
-                            </li>
-                            <li>
-                                <a href="privacy-policy.html" target="_blank">
-                                    Battambang
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
+                </div> --}}
+                <div class="col-lg-4 col-md-6">
                     <div class="footer-widget">
                         <h3>USEFUL LINKS</h3>
                         <ul class="footer-list">
@@ -82,7 +53,55 @@
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-6">
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget pl-5">
+                        <h3>DESTINATION</h3>
+                        <ul class="footer-list">
+                            <li>
+                                <a href="about.html" target="_blank">
+                                    Kampot
+                                </a>
+                            </li>
+                            <li>
+                                <a href="services-1.html" target="_blank">
+                                    Siem Reap
+                                </a>
+                            </li>
+                            <li>
+                                <a href="terms-condition.html" target="_blank">
+                                    Phnom Penh
+                                </a>
+                            </li>
+                            <li>
+                                <a href="privacy-policy.html" target="_blank">
+                                    Battambang
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget">
+                        <h3>CONTACT US</h3>
+                        <ul class="footer-list-contact">
+                            <li>
+                                <i class="fa-solid fa-phone"></i>
+                                <a href="tel:+1-(123)-456-7890">+885 123456789</a>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                <a href="mailto:hello@atoli.com">flexibooking@gmail.com</a>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-location-dot"></i>
+                                <a href="#">Villa #4, Street 228, Sangkat Chaktomuk, Khan Doun Penh, Phnom Penh, Cambodia.</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                {{-- <div class="col-lg-3 col-md-6">
                     <div class="footer-widget">
                         <h3>SUBSCRIBE US</h3>
                         <div class="footer-form">
@@ -104,13 +123,13 @@
                             </form>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
 
         <div class="copy-right-area">
             <div class="row">
-                <div class="col-lg-8 col-md-8">
+                <div class="col-lg-6 col-md-8">
                     <div class="copy-right-text text-align1">
                         <p>
                             Copyright @ FlexiBooking. All Rights Reserved by
@@ -119,7 +138,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-11 col-md-11">
+                <div class="col-lg-6 col-md-11">
                     <div class="social-icon text-align2">
                         <ul class="social-link">
                             <li>

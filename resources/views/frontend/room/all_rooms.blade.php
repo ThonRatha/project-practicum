@@ -1,23 +1,5 @@
 @extends('frontend.main_master')
 @section('main')
-{{--
-        <!-- Inner Banner -->
-        <div class="inner-banner inner-bg9">
-            <div class="container">
-                <div class="inner-title">
-                    <ul>
-                        <li>
-                            <a href="index.html">Home</a>
-                        </li>
-                        <li><i class='bx bx-chevron-right'></i></li>
-                        <li>Rooms</li>
-                    </ul>
-                    <h3>Rooms</h3>
-                </div>
-            </div>
-        </div>
-        <!-- Inner Banner End --> --}}
-
         <!-- Room Area -->
         <div class="room-area pt-10 pb-70">
             <div class="container">

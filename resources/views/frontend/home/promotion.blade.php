@@ -8,14 +8,14 @@
             <div class="col-lg-3">
                     <div class="card-img">
                         <a href="room-details.html">
-                            <img src="{{ asset('frontend/assets/img/promotion/dis.jpg') }}" alt="Images">
+                            <img src="{{ asset('frontend/assets/img/promotion/d1.png') }}" alt="Images">
                         </a>
                     </div>
             </div>
             <div class="col-lg-3">
                 <div class="card-img">
                     <a href="room-details.html">
-                        <img src="{{ asset('frontend/assets/img/promotion/diss-30.jpg') }}" alt="Images">
+                        <img src="{{ asset('frontend/assets/img/promotion/d2.png') }}" alt="Images">
                     </a>
                 </div>
             </div>
@@ -23,14 +23,14 @@
             <div class="col-lg-3">
                 <div class="card-img">
                     <a href="room-details.html">
-                        <img src="{{ asset('frontend/assets/img/promotion/dis.jpg') }}" alt="Images">
+                        <img src="{{ asset('frontend/assets/img/promotion/d3.png') }}" alt="Images">
                     </a>
                 </div>
             </div>
             <div class="col-lg-3">
                 <div class="card-img">
                     <a href="room-details.html">
-                        <img src="{{ asset('frontend/assets/img/promotion/save_30.jpg') }}" alt="Images">
+                        <img src="{{ asset('frontend/assets/img/promotion/d4.png') }}" alt="Images">
                     </a>
                 </div>
             </div>

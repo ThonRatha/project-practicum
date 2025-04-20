@@ -1,26 +1,7 @@
 @extends('frontend.main_master')
 @section('main')
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-{{--
-        <!-- Inner Banner -->
-        <div class="inner-banner inner-bg10">
-            <div class="container">
-                <div class="inner-title">
-                    <ul>
-                        <li>
-                            <a href="index.html">Home</a>
-                        </li>
-                        <li><i class="fa-solid fa-arrow-right"></i></li>
-                        <li>Room Details </li>
-                    </ul>
-                    <h3>{{ $roomdetails->type->name }}</h3>
-                </div>
-            </div>
-        </div>
-        <!-- Inner Banner End --> --}}
-
-        <!-- Room Details Area End -->
-        <div class="room-details-area pt-100 pb-70">
+        <div class="room-details-area pb-70">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4">
@@ -87,15 +68,15 @@
                                             <table class="table">
                                                 <tr>
                                                     <td ><p>SubTotal</p></td>
-                                                    <td style="text-align:right"><span class="t_subtotal"></span></td>
+                                                    <td style="text-align:right">$<span class="t_subtotal"></span></td>
                                                 </tr>
                                                 <tr>
                                                     <td><p>Discount</p></td>
-                                                    <td style="text-align:right"><span class="t_discount"></span></td>
+                                                    <td style="text-align:right">$<span class="t_discount"></span></td>
                                                 </tr>
                                                 <tr>
                                                     <td><p>Total</p></td>
-                                                    <td style="text-align:right"><span class="t_g_total"></span></td>
+                                                    <td style="text-align:right">$<span class="t_g_total"></span></td>
                                                 </tr>
                                             </table>
                                         </div>
@@ -116,7 +97,7 @@
                             <div class="room-details-slider owl-carousel owl-theme">
                                 @foreach ($multiImage as $image)
                                 <div class="room-details-item">
-                                    <img src="{{ asset('upload/room_img/'.$image->multi_img) }}" alt="Images">
+                                    <img src="{{ asset('upload/room_img/multi_img/'.$image->multi_img) }}" alt="Images">
                                 </div>
                                 @endforeach
                             </div>
