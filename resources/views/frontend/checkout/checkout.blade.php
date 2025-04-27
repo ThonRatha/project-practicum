@@ -130,14 +130,9 @@
                                     <hr>
 
                                     <div style="display: flex">
-                                        <img style="height:100px; width:120px;object-fit: cover" src=" "
+                                        <img style="height:270px; width:500px;object-fit: cover"
                                         src="{{ (!empty($room->image))? url('upload/room_img/'.$room->image):url('upload/no_image.jpg') }}"  alt="Images" alt="Images">
-                                        <div style="padding-left: 10px;">
-                                                <a href=" " style="font-size: 20px; color: #595959;font-weight: bold">
-                                                    {{ @$room->type->name }}
-                                                </a>
-                                                <p><b>$ {{ $room->price }} / Night</b></p>
-                                        </div>
+
 
                                     </div>
 
@@ -148,6 +143,12 @@
                                             $subtotal = $room->price * $nights * $book_data['number_of_rooms'];
                                             $discount = ($room->discount/100)*$subtotal;
                                         @endphp
+                                        <div style="padding-left: 10px;">
+                                            <a href=" " style="font-size: 20px; color: #595959;font-weight: bold">
+                                                {{ @$room->type->name }}
+                                            </a>
+                                            <p><b>$ {{ $room->price }} / Night</b></p>
+                                    </div>
                                         <tr>
                                             <td><p>Total Night <br> <b> ({{ $book_data['check_in'] }} - {{ $book_data['check_out'] }})</p></td>
                                             <td style="text-align: right"></b><p>{{ $nights }} Days</p></td>
