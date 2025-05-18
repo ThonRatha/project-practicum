@@ -2,14 +2,16 @@
 @section('main')
 
 <!-- Banner Area -->
+<!-- Banner Area Start -->
 <div class="banner-area" style="height: 480px;">
     <div class="container">
         <div class="banner-content">
-            {{-- <h1>Enjoy your vocation with Us!</h1>
-            <p> Booking room to stay and we'll show you who with!</p> --}}
-        </div>
+        <button type="button" class="btn btn-outline-light custom-button text-left">
+        Search<i class="fa-solid fa-magnifying-glass"></i></button>
+</div>
     </div>
 </div>
+
 <!-- Banner Area End -->
 
 <!-- Banner Form Area -->

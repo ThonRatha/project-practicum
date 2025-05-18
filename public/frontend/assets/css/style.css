@@ -1191,19 +1191,6 @@ Main Banner Area
     z-index: 1;
 }
 
-    /* .banner-area::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background-image: -webkit-gradient(linear, left top, right top, from(#ffffff85), to(#ffffff00));
-    background-image: linear-gradient(to right, #ffffff85, #ffffff00);
-    z-index: -1;
-    } */
-
 .banner-content {
     padding: 150px 0 100px;
     max-width: 650px;
@@ -1221,87 +1208,59 @@ Main Banner Area
 }
 
 .banner-content p {
-  font-size: 24px;
-  margin-bottom: 30px;
-  color: #FFFFFF;
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: #FFFFFF;
 }
 
-.banner-area-three {
-  background-image: url(../img/home-three.jpg);
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
 
 .banner-max {
-  max-width: 960px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 160px 0 162px;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 160px 0 162px;
 }
 
-.banner-area-two {
-  background-image: -webkit-gradient(linear, left top, right top, from(#ffffff85), to(#FEF4F2));
-  background-image: linear-gradient(to right, #ffffff85, #FEF4F2);
-  padding-top: 180px;
-  padding-bottom: 85px;
-}
 
 .banner-another {
-  max-width: 540px;
-  margin-left: auto;
-  position: relative;
+    max-width: 540px;
+    margin-left: auto;
+    position: relative;
 }
 
 .banner-another h1 {
-  font-size: 50px;
-  line-height: 1.2;
-  font-weight: 700;
-  margin-bottom: 20px;
-  color: #292323;
+    font-size: 50px;
+    line-height: 1.2;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #292323;
 }
 
 .banner-another p {
-  font-size: 17px;
-  margin-bottom: 30px;
-  color: #555555;
+    font-size: 17px;
+    margin-bottom: 30px;
+    color: #555555;
 }
 
 .banner-another .banner-shape {
-  position: absolute;
-  top: -80px;
-  left: -70px;
+    position: absolute;
+    top: -80px;
+    left: -70px;
 }
 
 .banner-another .banner-shape img {
-  height: 550px;
+    height: 550px;
 }
 
 .banner-img {
-  max-width: 600px;
-  margin-right: auto;
-  position: relative;
-  z-index: 1;
-}
-
-.banner-img::before {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  top: 30px;
-  right: -30px;
-  width: 100%;
-  height: 90%;
-  background-image: url(../img/home-two/home-two-bg.jpg);
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-radius: 50px;
-  opacity: 0.5;
+    max-width: 600px;
+    margin-right: auto;
+    position: relative;
+    z-index: 1;
 }
 
 .banner-img img {
-  border-radius: 50px;
+    border-radius: 50px;
 }
 
 /*=================================
@@ -1310,6 +1269,16 @@ Main Banner Area End
 /*=================================
 Banner Form Area
 ====================================*/
+.custom-button {
+    width: 800px;
+    height: 50px;
+    margin-top: 30px;
+    background-color: #F5F5F5;
+    color: #0088CC;
+    border: 5px;
+    text-align: left;
+    border-radius: 10px;
+}
 .banner-form {
     position: relative;
     z-index: 1;
@@ -1427,120 +1396,72 @@ Banner Form Area End
 Inner Banner
 ==================================*/
 .inner-banner {
-  position: relative;
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
+    position: relative;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .inner-banner::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #1B2132;
-  opacity: 0.5;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1B2132;
+    opacity: 0.5;
 }
 
 .inner-banner .inner-title {
-  padding-top: 150px;
-  padding-bottom: 150px;
-  position: relative;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    position: relative;
 }
 
 .inner-banner .inner-title ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .inner-banner .inner-title ul li {
-  font-size: 18px;
-  color: #ffffff;
-  display: inline-block;
-  margin-right: 5px;
-  position: relative;
-  font-weight: 500;
-  font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    color: #ffffff;
+    display: inline-block;
+    margin-right: 5px;
+    position: relative;
+    font-weight: 500;
+    font-family: "Open Sans", sans-serif;
 }
 
 .inner-banner .inner-title ul li:last-child {
-  margin-right: 0;
+    margin-right: 0;
 }
 
 .inner-banner .inner-title ul li a {
-  color: #ffffff;
+    color: #ffffff;
 }
 
 .inner-banner .inner-title ul li a:hover {
-  color: #EE786C;
+    color: #007bff;
 }
 
 .inner-banner .inner-title ul li i {
-  font-size: 24px;
-  color: #ffffff;
-  position: relative;
-  top: 5px;
+    font-size: 24px;
+    color: #ffffff;
+    position: relative;
+    top: 5px;
 }
 
 .inner-banner .inner-title h3 {
-  margin-top: 10px;
-  font-size: 40px;
-  color: #ffffff;
-  font-weight: 700;
-  position: relative;
-  font-family: "Open Sans", sans-serif;
-}
-
-.inner-bg1 {
-  background-image: url(../img/inner-banner/inner-banner1.jpg);
-}
-
-.inner-bg2 {
-  background-image: url(../img/inner-banner/inner-banner2.jpg);
-}
-
-.inner-bg3 {
-  background-image: url(../img/inner-banner/inner-banner3.jpg);
-}
-
-.inner-bg4 {
-  background-image: url(../img/inner-banner/inner-banner4.jpg);
-}
-
-.inner-bg5 {
-  background-image: url(../img/inner-banner/inner-banner5.jpg);
-}
-
-.inner-bg6 {
-  background-image: url(../img/inner-banner/inner-banner6.jpg);
-}
-
-.inner-bg7 {
-  background-image: url(../img/inner-banner/inner-banner7.jpg);
-}
-
-.inner-bg8 {
-  background-image: url(../img/inner-banner/inner-banner8.jpg);
-}
-
-.inner-bg9 {
-  background-image: url(../img/inner-banner/inner-banner9.jpg);
-}
-
-.inner-bg10 {
-  background-image: url(../img/inner-banner/inner-banner10.jpg);
-}
-
-.inner-bg11 {
-  background-image: url(../img/inner-banner/inner-banner11.jpg);
-}
-
-.inner-bg12 {
-  background-image: url(../img/inner-banner/inner-banner12.jpg);
+    margin-top: 10px;
+    font-size: 40px;
+    color: #ffffff;
+    font-weight: 700;
+    position: relative;
+    font-family: "Open Sans", sans-serif;
 }
 
 /*=================================

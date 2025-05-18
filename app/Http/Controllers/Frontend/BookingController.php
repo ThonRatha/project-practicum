@@ -89,10 +89,11 @@ class BookingController extends Controller
             $code = rand(000000000,999999999);
 
         if($request->payment_method == 'Stripe'){
-            Stripe\Stripe::setApiKey(env('STRIPE_KEY'));
+            Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
             $s_pay = Stripe\Charge::create ([
                 "amount" => $total_price * 100,
                 "currency" => "usd",
+                "source" => $request->stripeToken,
                 "description" => "Payment For Booking. Booking No ".$code,
             ]);
             if ($s_pay['status'] == 'succeeded') {
@@ -102,7 +103,7 @@ class BookingController extends Controller
 
                 $notification = array(
                     'message' => 'Sorry Payment Field',
-                    'alert-type' => 'error'
+                    'alert_type' => 'error'
                 );
                 return redirect('/')->with($notification);
 
