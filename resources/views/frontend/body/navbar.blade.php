@@ -1,7 +1,7 @@
 <div class="navbar-area">
     <!-- Menu For Mobile Device -->
     <div class="mobile-nav">
-        <a href="index.html" class="logo">
+        <a href="#" class="logo">
             <img src="{{ asset('frontend/assets/img/logos/logo.png') }}" class="logo-one" alt="Logo">
             <img src="{{ asset('frontend/assets/img/logos/logo.png') }}" class="logo-two" alt="Logo">
         </a>
@@ -11,7 +11,7 @@
     <div class="main-nav">
         <div class="container">
             <nav class="navbar navbar-expand-md navbar-light ">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="#">
                     <img src="{{ asset('frontend/assets/img/logos/logo.png') }}" class="logo-one" alt="Logo">
                     <img src="{{ asset('frontend/assets/img/logos/logo.png') }}" class="logo-two" alt="Logo">
                 </a>
@@ -21,34 +21,23 @@
                         <li class="nav-item">
                             <a href="{{ url('/') }}" class="nav-link active">
                                 HOME
-
                             </a>
 
                         </li>
 
+
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                BLOG
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{ route('service') }}" class="nav-link">
                                 SERVICE
                             </a>
                             <ul class="dropdown-menu">
                                 <li class="nav-item">
                                     <a href="services-1.html" class="nav-link">
-                                        Services Style One
-                                    </a>
+                                        Cleaning Service                                    </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="services-2.html" class="nav-link">
-                                        Services Style Two
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="service-details.html" class="nav-link">
-                                        Service Details
+                                        Food Service
                                     </a>
                                 </li>
                             </ul>
@@ -73,7 +62,7 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="contact.html" class="nav-link">
+                            <a href="{{ route('coupon') }}" class="nav-link">
                                 COUPON
                             </a>
                         </li>

@@ -14,6 +14,14 @@ class GalleryController extends Controller
         return view('frontend.contact.contact_us');
     }
 
+    public function Coupon(){
+        return view('frontend.contact.coupon');
+    }
+
+    public function Service(){
+        return view('frontend.contact.service');
+    }
+
     public function StoreContact(Request $request){
         Contact::insert([
             'name'=>$request->name,

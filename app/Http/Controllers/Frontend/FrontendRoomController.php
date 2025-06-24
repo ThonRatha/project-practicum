@@ -8,32 +8,49 @@ use App\Models\Facility;
 use App\Models\MultiImage;
 use App\Models\Room;
 use App\Models\RoomBookedDate;
+use App\Models\RoomType;
 use Carbon\Carbon;
 use Carbon\CarbonPeriod;
 use Illuminate\Http\Request;
 
 class FrontendRoomController extends Controller
 {
-    public function AllFrontendRoomList() {
+    public function AllFrontendRoomList()
+    {
 
         $rooms = Room::latest()->get();
         return view('frontend.room.all_rooms', compact('rooms'));
     }
-    public function RoomDetailsPage($id){
+    public function SearchRoom(Request $request)
+    {
+        $query = $request->input('search');
+        $rooms = Room::when($query, function ($q) use ($query) {
+            $q->orWhereHas('roomType', function ($q2) use ($query) {
+                $q2->where('name', 'LIKE', "%{$query}%");
+            });
+        })
+            ->latest()
+            ->get();
+
+        return view('frontend.room.all_rooms', compact('rooms', 'query'));
+    }
+    public function RoomDetailsPage($id)
+    {
 
         $roomdetails = Room::find($id);
         $multiImage = MultiImage::where('room_id', $id)->get();
         $facility = Facility::where('room_id', $id)->get();
 
-        $otherRooms = Room::where('id','!=', $id)->orderBy('id', 'DESC')->limit(4)->get();
+        $otherRooms = Room::where('id', '!=', $id)->orderBy('id', 'DESC')->limit(4)->get();
         return view('frontend.room.room_details', compact('roomdetails', 'multiImage', 'facility', 'otherRooms'));
     }
-    public function BookingSearch(Request $request){
+    public function BookingSearch(Request $request)
+    {
 
         // flash use to store all input single request
         $request->flash();
 
-        if($request->check_in == $request->check_out){
+        if ($request->check_in == $request->check_out) {
             $notification = array(
                 'message' => 'Something went Wrong',
                 'alert-type' => 'error'
@@ -47,52 +64,58 @@ class FrontendRoomController extends Controller
         $alldate = Carbon::create($edate)->subDay();
         $d_period = CarbonPeriod::create($sdate, $alldate);
         $dt_array = [];
-        foreach($d_period as $period){
+        foreach ($d_period as $period) {
             array_push($dt_array, date('Y-m-d', strtotime($period)));
         }
 
-        $check_date_booking_ids = RoomBookedDate::whereIn('book_date',
-        $dt_array)->distinct()->pluck('booking_id')->toArray();
+        $check_date_booking_ids = RoomBookedDate::whereIn(
+            'book_date',
+            $dt_array
+        )->distinct()->pluck('booking_id')->toArray();
 
         $rooms = Room::withCount('room_numbers')->where('status', 1)->get();
 
         return view('frontend.room.search_room', compact('rooms', 'check_date_booking_ids'));
     }
 
-    public function SearchRoomDetails(Request $request, $id) {
+    public function SearchRoomDetails(Request $request, $id)
+    {
         $request->flash();
         $roomdetails = Room::find($id);
         $multiImage = MultiImage::where('room_id', $id)->get();
         $facility = Facility::where('room_id', $id)->get();
 
-        $otherRooms = Room::where('id','!=', $id)->orderBy('id', 'DESC')->limit(4)->get();
+        $otherRooms = Room::where('id', '!=', $id)->orderBy('id', 'DESC')->limit(4)->get();
         $rooms_id = $id;
         return view('frontend.room.search_room_details', compact('roomdetails', 'multiImage', 'facility', 'otherRooms', 'rooms_id'));
     }
 
-    public function CheckRoomAvailability(Request $request)  {
+    public function CheckRoomAvailability(Request $request)
+    {
 
         $sdate = date('Y-m-d', strtotime($request->check_in));
         $edate = date('Y-m-d', strtotime($request->check_out));
         $alldate = Carbon::create($edate)->subDay();
         $d_period = CarbonPeriod::create($sdate, $alldate);
         $dt_array = [];
-        foreach($d_period as $period){
+        foreach ($d_period as $period) {
             array_push($dt_array, date('Y-m-d', strtotime($period)));
         }
 
-        $check_date_booking_ids = RoomBookedDate::whereIn('book_date',
-        $dt_array)->distinct()->pluck('booking_id')->toArray();
+        $check_date_booking_ids = RoomBookedDate::whereIn(
+            'book_date',
+            $dt_array
+        )->distinct()->pluck('booking_id')->toArray();
 
         $room = Room::withCount('room_numbers')->find($request->room_id);
-        $bookings = Booking::withCount('assign_rooms')->whereIn('id',$check_date_booking_ids)
-        ->where('room_id',$room->id)->get()->toArray();
+        $bookings = Booking::withCount('assign_rooms')->whereIn('id', $check_date_booking_ids)
+            ->where('room_id', $room->id)->get()->toArray();
 
-        $total_book_room = array_sum(array_column($bookings,'assign_rooms_count'));
-        $av_room = @$room->room_numbers_count-$total_book_room;
+        $total_book_room = array_sum(array_column($bookings, 'assign_rooms_count'));
+        $av_room = @$room->room_numbers_count - $total_book_room;
         $toDate = Carbon::parse($request->check_in);
         $fromDate = Carbon::parse($request->check_out);
         $nights = $toDate->diffInDays($fromDate);
-        return response()->json(['available_room'=>$av_room, 'total_nights'=>$nights ]);
+        return response()->json(['available_room' => $av_room, 'total_nights' => $nights]);
     }
 }

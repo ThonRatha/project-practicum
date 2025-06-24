@@ -23,7 +23,7 @@
 <div class="card mb-3" >
 <div class="card-header">Total Booking</div>
 <div class="card-body">
-<h1 class="card-title" style="font-size: 45px;">2</h1>
+<h1 class="card-title" style="font-size: 45px;">0</h1>
 
 </div>
 </div>
@@ -33,7 +33,7 @@
 <div class="card mb-3">
 <div class="card-header">Pending Booking </div>
 <div class="card-body">
-<h1 class="card-title" style="font-size: 45px;">1</h1>
+<h1 class="card-title" style="font-size: 45px;">0</h1>
 
 </div>
 </div>
@@ -44,7 +44,7 @@
 <div class="card mb-3">
 <div class="card-header">Complete Booking</div>
 <div class="card-body">
-<h1 class="card-title" style="font-size: 45px;">1</h1>
+<h1 class="card-title" style="font-size: 45px;">0</h1>
 
 </div>
 </div>

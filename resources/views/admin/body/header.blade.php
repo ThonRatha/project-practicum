@@ -95,7 +95,7 @@
                                     <div class="d-flex align-items-center gap-3">
                                         <div class="position-relative">
                                             <div class="cart-product rounded-circle bg-light">
-                                                <img src="assets/images/products/11.png" class="" alt="product image">
+                                                <img src="{{ asset('upload/dash_img/aiease_1750351501081.jpg') }}" class="" alt="product image">
                                             </div>
                                         </div>
                                         <div class="flex-grow-1">
@@ -113,15 +113,15 @@
                                     <div class="d-flex align-items-center gap-3">
                                         <div class="position-relative">
                                             <div class="cart-product rounded-circle bg-light">
-                                                <img src="assets/images/products/11.png" class="" alt="product image">
+                                                <img src="{{ asset('upload/dash_img/aiease_1750351599971.jpg') }}" class="" alt="product image">
                                             </div>
                                         </div>
                                         <div class="flex-grow-1">
-                                            <h6 class="cart-product-title mb-0">Queen Room</h6>
+                                            <h6 class="cart-product-title mb-0">Studio Room</h6>
                                             <p class="cart-product-price mb-0">2 people</p>
                                         </div>
                                         <div class="">
-                                            <p class="cart-price mb-0">$30.00</p>
+                                            <p class="cart-price mb-0">$25.00</p>
                                         </div>
                                         <div class="cart-product-cancel"><i class="bx bx-x"></i>
                                         </div>
@@ -131,15 +131,15 @@
                                     <div class="d-flex align-items-center gap-3">
                                         <div class="position-relative">
                                             <div class="cart-product rounded-circle bg-light">
-                                                <img src="assets/images/products/11.png" class="" alt="product image">
+                                                <img src="{{ asset('upload/dash_img/aiease_1750351301199.jpg') }}" class="" alt="product image">
                                             </div>
                                         </div>
                                         <div class="flex-grow-1">
-                                            <h6 class="cart-product-title mb-0">Queen Room</h6>
+                                            <h6 class="cart-product-title mb-0">Single Room</h6>
                                             <p class="cart-product-price mb-0">2 peolpe</p>
                                         </div>
                                         <div class="">
-                                            <p class="cart-price mb-0">$30.00</p>
+                                            <p class="cart-price mb-0">$20.00</p>
                                         </div>
                                         <div class="cart-product-cancel"><i class="bx bx-x"></i>
                                         </div>

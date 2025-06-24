@@ -120,48 +120,7 @@
             </div>
         </div>
     </div>
-        {{-- <div class="col-12 col-lg-4 d-flex">
-            <div class="card radius-10 w-100">
-                <div class="card-header">
-                    <div class="d-flex align-items-center">
-                        <div>
-                            <h6 class="mb-0">Trending Products</h6>
-                        </div>
-                        <div class="dropdown ms-auto">
-                            <a class="dropdown-toggle dropdown-toggle-nocaret" href="#" data-bs-toggle="dropdown"><i class='bx bx-dots-horizontal-rounded font-22 text-option'></i>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="javascript:;">Action</a>
-                                </li>
-                                <li><a class="dropdown-item" href="javascript:;">Another action</a>
-                                </li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="javascript:;">Something else here</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <div class="chart-container-2">
-                        <canvas id="chart2"></canvas>
-                    </div>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item d-flex bg-transparent justify-content-between align-items-center border-top">Jeans <span class="badge bg-success rounded-pill">25</span>
-                    </li>
-                    <li class="list-group-item d-flex bg-transparent justify-content-between align-items-center">T-Shirts <span class="badge bg-danger rounded-pill">10</span>
-                    </li>
-                    <li class="list-group-item d-flex bg-transparent justify-content-between align-items-center">Shoes <span class="badge bg-primary rounded-pill">65</span>
-                    </li>
-                    <li class="list-group-item d-flex bg-transparent justify-content-between align-items-center">Lingerie <span class="badge bg-warning text-dark rounded-pill">14</span>
-                    </li>
-                </ul>
-            </div>
-        </div> --}}
-    </div><!--end row-->
+
 
     <div class="card radius-10">
         <div class="card-header">
@@ -202,7 +161,7 @@
             </thead>
             <tbody><tr>
             <td>One Bed Room</td>
-            <td><img src="#" class="product-img-2"></td>
+            <td><img src="{{ asset('upload/dash_img/aiease_1750351501081.jpg') }}" class="product-img-2"></td>
             <td>#001</td>
             <td><span class="badge bg-gradient-green text-white shadow-sm w-50">Paid</span></td>
             <td>$25.00</td>
@@ -214,7 +173,7 @@
 
             <tr>
             <td>Two Bed Room</td>
-            <td><img src="#" class="product-img-2"></td>
+            <td><img src="{{ asset('upload/dash_img/aiease_1750351599971.jpg') }}" class="product-img-2"></td>
             <td>#002</td>
             <td><span class="badge bg-gradient-blues text-white shadow-sm w-50">Pending</span></td>
             <td>$20.00</td>
@@ -226,7 +185,7 @@
 
             <tr>
             <td>Three Bed Room</td>
-            <td><img src="#" class="product-img-2"></td>
+            <td><img src="{{ asset('upload/dash_img/aiease_1750351301199.jpg') }}" class="product-img-2"></td>
             <td>#003</td>
             <td><span class="badge bg-gradient-burning text-white shadow-sm w-50" >Canceled</span></td>
             <td>$15.00</td>

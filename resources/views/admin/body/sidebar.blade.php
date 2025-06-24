@@ -12,7 +12,7 @@
             <a href="{{ route('admin.dashboard') }}">
                 <div class="parent-icon"><i class="fa-regular fa-address-card"></i>
                 </div>
-                <div class="menu-title">Dashboard</div>
+                <div class="menu-title">&nbsp; Dashboard</div>
             </a>
         </li>
 
@@ -35,7 +35,7 @@
                 <div class="parent-icon">
                     <i class="fa-solid fa-calendar-days"></i>
                 </div>
-                <div class="menu-title">Book Area</div>
+                <div class="menu-title">&nbsp; Book Area</div>
             </a>
 
             <ul>
@@ -67,17 +67,30 @@
                 </li>
             </ul>
         </li>
+
         <li>
             <a class="has-arrow" href="javascript:;">
-                <div class="parent-icon"><i class="fa-solid fa-comments"></i>
+                <div class="parent-icon"><i class="fa-solid fa-comment-dots"></i>
                 </div>
-                <div class="menu-title">Contact Message </div>
+                <div class="menu-title">&nbsp;Message </div>
             </a>
             <ul>
                 <li> <a href="{{ route('contact.message') }}"><i class="fa-solid fa-envelope-open"></i>All Message </a>
                 </li>
             </ul>
         </li>
+        <li>
+            <a class="has-arrow" href="javascript:;">
+                <div class="parent-icon"><i class="fa-solid fa-envelope-open-text"></i>
+                </div>
+                <div class="menu-title">&nbsp;Testimonial</div>
+            </a>
+            <ul>
+                <li> <a href="{{ route('all.testimonial') }}"><i class="fa-solid fa-envelope-open"></i>All Testimonial </a></li>
+                <li> <a href="#"><i class="fa-solid fa-file-circle-plus"></i>Add</a></li>
+            </ul>
+        </li>
+
 
     <!--end navigation-->
 </div>

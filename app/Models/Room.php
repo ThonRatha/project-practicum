@@ -10,12 +10,18 @@ class Room extends Model
     use HasFactory;
     protected $guarded = [];
 
-    public function type() {
+    public function type()
+    {
         return $this->belongsTo(RoomType::class, 'room_type_id', 'id');
     }
 
-    public function room_numbers() {
+    public function room_numbers()
+    {
         return $this->hasMany(RoomNumber::class, 'room_id')->where('status', 'Active');
+    }
 
+    public function roomType()
+    {
+        return $this->belongsTo(RoomType::class, 'room_type_id');
     }
 }

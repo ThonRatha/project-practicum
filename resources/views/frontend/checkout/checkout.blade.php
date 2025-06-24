@@ -1,6 +1,8 @@
 @extends('frontend.main_master')
 @section('main')
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 <!-- Checkout Area -->
 <section class="checkout-area pb-70">
     <div class="container">
@@ -210,19 +212,30 @@ $(function() {
     var $form = $(".require-validation");
     $('form.require-validation').bind('submit', function(e) {
 
-          var pay_method = $('input[name="payment_method"]:checked').val();
-          if (pay_method == undefined){
-                alert('Please select a payment method');
-                return false;
-          }else if(pay_method == 'COD'){
+        var pay_method = $('input[name="payment_method"]:checked').val();
+        if (pay_method == undefined){
+            alert('Please select a payment method');
+            return false;
+        }else if (pay_method == 'PWR') {
+        e.preventDefault(); // stop the form from submitting
 
-          }else{
+        Swal.fire({
+            icon: 'success',
+            title: 'Payment Successful',
+            text: 'Thank you for your Booking!',
+            confirmButtonText: 'Ok'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = '/'; // Change to your actual profile page
+            }
+        });
+        }else{
                 document.getElementById('myButton').disabled = true;
 
                 var $form         = $(".require-validation"),
                         inputSelector = ['input[type=email]', 'input[type=password]',
-                              'input[type=text]', 'input[type=file]',
-                              'textarea'].join(', '),
+                            'input[type=text]', 'input[type=file]',
+                            'textarea'].join(', '),
                         $inputs       = $form.find('.required').find(inputSelector),
                         $errorMessage = $form.find('div.error'),
                         valid         = true;
@@ -230,26 +243,26 @@ $(function() {
 
                 $('.has-error').removeClass('has-error');
                 $inputs.each(function(i, el) {
-                      var $input = $(el);
-                      if ($input.val() === '') {
+                    var $input = $(el);
+                    if ($input.val() === '') {
                             $input.parent().addClass('has-error');
                             $errorMessage.removeClass('hide');
                             e.preventDefault();
-                      }
+                    }
                 });
 
                 if (!$form.data('cc-on-file')) {
 
-                      e.preventDefault();
-                      Stripe.setPublishableKey($form.data('stripe-publishable-key'));
-                      Stripe.createToken({
-                            number: $('.card-number').val(),
-                            cvc: $('.card-cvc').val(),
-                            exp_month: $('.card-expiry-month').val(),
-                            exp_year: $('.card-expiry-year').val()
-                      }, stripeResponseHandler);
-                }
-          }
+                    e.preventDefault();
+                    Stripe.setPublishableKey($form.data('stripe-publishable-key'));
+                    Stripe.createToken({
+                        number: $('.card-number').val(),
+                        cvc: $('.card-cvc').val(),
+                        exp_month: $('.card-expiry-month').val(),
+                        exp_year: $('.card-expiry-year').val()
+                    }, stripeResponseHandler);
+            }
+        }
 
 
 

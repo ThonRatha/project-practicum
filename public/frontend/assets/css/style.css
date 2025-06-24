@@ -1176,12 +1176,9 @@ Sidebar Modal
     right: 0;
 }
 
-/*=================================
-Sidebar Modal
-====================================*/
-/*=================================
-Main Banner Area
-====================================*/
+/*Sidebar Modal*/
+
+/*Main Banner Area*/
 .banner-area {
     background-image: url(../img/banner.png);
     background-position: center center;
@@ -1192,7 +1189,7 @@ Main Banner Area
 }
 
 .banner-content {
-    padding: 150px 0 100px;
+    padding: 180px 0 100px;
     max-width: 650px;
     margin-right: auto;
     position: relative;
